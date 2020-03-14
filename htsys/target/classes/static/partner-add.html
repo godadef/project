@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.2</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/xadmin.css">
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./js/xadmin.js"></script>
+        <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+            <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <form class="layui-form">
+                  <input type="text" hidden id="haoyouId">
+                  <div class="layui-form-item">
+                      <label for="nikeName" class="layui-form-label">
+                          <span class="x-red">* </span>账号
+                      </label>
+                      <div class="layui-input-inline">
+                          <input type="text" id="loginId" name="loginId" required class="layui-input">
+                      </div>
+                  </div>
+                  <div class="layui-form-item">
+                      <label for="phone" class="layui-form-label">
+                          <span class="x-red">* </span>用户名
+                      </label>
+                      <div class="layui-input-inline">
+                          <input type="text" id="userName" name="userName" required class="layui-input">
+                      </div>
+                  </div>
+                  <div class="layui-form-item">
+                      <label for="remarks" class="layui-form-label">
+                          <span class="x-red">* </span>密码
+                      </label>
+                      <div class="layui-input-inline">
+                          <input type="text" id="password" name="password" required class="layui-input">
+                      </div>
+                  </div>
+                  <div class="layui-form-item">
+                      <label for="remarks" class="layui-form-label">
+                          <span class="x-red">* </span>手机号码
+                      </label>
+                      <div class="layui-input-inline">
+                          <input type="text" id="phone" name="phone" required class="layui-input">
+                      </div>
+                  </div>
+                  <div class="layui-form-item">
+                      <label for="remarks" class="layui-form-label">
+                          <span class="x-red">* </span>权限
+                      </label>
+                      <div class="layui-input-inline">
+                          <input type="number" min="1" placeholder="请使用滚轮" max="3" id="permission" name="permission" required class="layui-input"  style="ime-mode:disabled" onkeypress="noPermitInput(event)" >
+                      </div>
+                  </div>
+                  <div class="layui-form-item">
+                      <button  class="layui-btn layui-btn-lg" lay-submit lay-filter="add_user" id="btn_add_partner"> 添加记录 </button>
+                  </div>
+              </form>
+            </div>
+        </div>
+      <script>
+      function noPermitInput(e){
+       var evt = window.event || e ;
+            evt.preventDefault(); //fire fox 禁止键盘输入
+      }
+          $(function  () {
+              layui.use('form', function(){
+                var form = layui.form;
+                form.on('submit(add_user)', function(data){
+                    $.ajax({
+                        url: "/admin/insertSelective",
+                        dateType: "json",
+                        contentType : "application/json",
+                        type: "post",
+                        data: JSON.stringify({
+                              'loginId'  : $('#loginId').val(),
+                              'userName' : $('#userName').val(),
+                              'password' : $('#password').val(),
+                              'phone'    : $('#phone').val(),
+                              'permission' : $('#permission').val(),
+                              'createDate' : new Date()
+                          }),
+                        success: function(res) {
+                             console.log(res);
+                            if(res == 'success') {
+                                layer.msg("添加成功！ 页面即将关闭！ ");
+                                var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                                console.log(index);
+                                setTimeout(
+                                    function(){
+                                        parent.layer.close(index);//关闭弹出的子页面窗口*!/
+                                    },1000)
+                            } else if(res == 'error1'){
+                                layer.msg('添加失败， 账号已存在!');
+                            } else {
+                                layer.msg('添加失败!');
+                            }
+                        }
+                    })
+                  return false;
+                });
+              });
+          })
+      </script>
+    </body>
+
+</html>

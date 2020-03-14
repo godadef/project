@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.2</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/xadmin.css">
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./js/xadmin.js"></script>
+        <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+            <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]--></head>
+    <body>
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table class="layui-table layui-form">
+                        <tr align="center">
+                            <td style="font-size: 16px;">模板名称</td>
+                            <td><input type="text" name="modename" id="modename" class="layui-input" placeholder="请输入模板名称" required></td>
+                        </tr>
+                        <tr align="center">
+                            <td rowspan="2" style="font-size: 16px;">需求调研</td>
+                                <td align="left"><input type="checkbox" lay-filter="xqdy_Cpjl" name="xqdyCpjl" id="xqdyCpjl" title="产品经理" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xqdyXqfxs" id="xqdyXqfxs" lay-filter="xqdy_Xqfxs" title="需求分析师" checked></td></tr>
+                        <tr align="center">
+                            <td rowspan="6" style="font-size: 16px;">系统设计</td>
+                                <td align="left"><input type="checkbox" name="xtsjCpjl" id="xtsjCpjl" lay-filter="xtkf_Cpjl" title="产品经理" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjYyjgsjs" id="xtsjYyjgsjs" lay-filter="xtkf_Yyjgsjs" title="应用架构师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjJcptsjs" id="xtsjJcptsjs" lay-filter="xtkf_Jcptsjs" title="基础平台设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjKhdappsjs" id="xtsjKhdappsjs" lay-filter="xtkf_Khdappsjs"  title="客户端(APP)设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjQdsjs" id="xtsjQdsjs" lay-filter="xtkf_Qdsjs" title="前端设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjUisjs" id="xtsjUisjs" lay-filter="xtkf_Uisjs" title="UI设计师" checked></td></tr>
+                        <tr align="center">
+                            <td rowspan="5" style="font-size: 16px;">系统开发</td>
+                                <td align="left"><input type="checkbox" name="xtkfJavayfgcs" id="xtkfJavayfgcs" lay-filter="xtkf_Javayfgcs" title="java研发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtkfAzkfgcs" id="xtkfAzkfgcs" lay-filter="xtkf_Azkfgcs" title="安卓开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtkfPgkfgcs" id="xtkfPgkfgcs" lay-filter="xtkf_Pgkfgcs" title="苹果开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtkfCkfgcs" id="xtkfCkfgcs" lay-filter="xtkf_Ckfgcs" title="C#开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="xtkfQdkfgcs" id="xtkfQdkfgcs" lay-filter="xtkf_Qdkfgcs" title="前端开发工程师" checked></td></tr>
+                        <tr align="center"><td align="center" style="font-size: 16px;">系统测试</td>
+                            <td align="left"><input type="checkbox" name="xtcsCsgcs" id="xtcsCsgcs" lay-filter="xtcs_Csgcs" title="测试工程师" checked></td></tr>
+                        <tr align="center"><td style="font-size: 16px;">业务支撑</td>
+                            <td align="left"><input type="checkbox" name="ywzcYwjl" id="ywzcYwjl" title="业务经理" checked></td></tr>
+                        <tr align="center"><td style="font-size: 16px;">系统实施</td>
+                            <td align="left"><input type="checkbox" name="xtssSsgcs" id="xtssSsgcs" title="实施工程师" checked></td></tr>
+                        <tr align="center"><td style="font-size: 16px;">项目管理</td>
+                            <td align="left" style="font-size: 16px;"><input type="checkbox" name="xmglXmzj" id="xmglXmzj" title="项目总监" checked></td></tr>
+                        <tr align="center"><td style="font-size: 16px;">技术管理</td>
+                            <td align="left"><input type="checkbox" name="jsglJszj" id="jsglJszj" title="技术总监" checked></td></tr>
+                        <tr align="center">
+                            <td rowspan="13" style="font-size: 16px;">二级系统——基础平台</td>
+                                <td align="left"><input type="checkbox" name="jcptCpjl" id="jcptCpjl" title="产品经理" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptXqfxs" id="jcptXqfxs" title="需求分析师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptYyjgsjs" id="jcptYyjgsjs" title="应用架构师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptJcptsjs" id="jcptJcptsjs" title="基础平台设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptKhdappsjs" id="jcptKhdappsjs" title="客户端(APP)设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptQdsjs" id="jcptQdsjs" title="前端设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptUisjs" id="jcptUisjs" title="UI设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptJavayfgcs" id="jcptJavayfgcs" title="java研发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptAzkfgcs" id="jcptAzkfgcs" title="安卓开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptPgkfgcs" id="jcptPgkfgcs" title="苹果开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptCkfgcs" id="jcptCkfgcs" title="C#开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptQdkfgcs" id="jcptQdkfgcs" title="前端开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jcptCsgcs" id="jcptCsgcs" title="测试工程师" checked></td></tr>
+                        <tr align="center">
+                            <td rowspan="13" style="font-size: 16px;">二级系统——应用层</td>
+                                <td align="left"><input type="checkbox" name="yycCpjl" id="yycCpjl" title="产品经理" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycXqfxs" id="yycXqfxs" title="需求分析师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycYyjgsjs" id="yycYyjgsjs" title="应用架构师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycYycsjs" id="yycJcptsjs" title="基础平台设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycKhdappsjs" id="yycKhdappsjs" title="客户端(APP)设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycQdsjs" id="yycQdsjs" title="前端设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycUisjs" id="yycUisjs" title="UI设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycJavayfgcs" id="yycJavayfgcs" title="java研发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycAzkfgcs" id="yycAzkfgcs" title="安卓开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycPgkfgcs" id="yycPgkfgcs" title="苹果开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycCkfgcs" id="yycCkfgcs" title="C#开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycQdkfgcs" id="yycQdkfgcs" title="前端开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="yycCsgcs" id="yycCsgcs" title="测试工程师" checked></td></tr>
+                        <tr align="center">
+                            <td rowspan="13" style="font-size: 16px;">二级系统——接口层</td>
+                                <td align="left"><input type="checkbox" name="jkcCpjl" id="jkcCpjl" title="产品经理" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcXqfxs" id="jkcXqfxs" title="需求分析师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcYyjgsjs" id="jkcYyjgsjs" title="应用架构师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcJkcsjs" id="jkcJcptsjs" title="基础平台设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcKhdappsjs" id="jkcKhdappsjs" title="客户端(APP)设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcQdsjs" id="jkcQdsjs" title="前端设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcUisjs" id="jkcUisjs" title="UI设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcJavayfgcs" id="jkcJavayfgcs" title="java研发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcAzkfgcs" id="jkcAzkfgcs" title="安卓开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcPgkfgcs" id="jkcPgkfgcs" title="苹果开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcCkfgcs" id="jkcCkfgcs" title="C#开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcQdkfgcs" id="jkcQdkfgcs" title="前端开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="jkcCsgcs" id="jkcCsgcs" title="测试工程师" checked></td></tr>
+
+                        <tr align="center">
+                            <td rowspan="13" style="font-size: 16px;">二级系统——服务层</td>
+                                <td align="left"><input type="checkbox" name="fwcCpjl" id="fwcCpjl" title="产品经理" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcXqfxs" id="fwcXqfxs" title="需求分析师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcYyjgsjs" id="fwcYyjgsjs" title="应用架构师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcJcptsjs" id="fwcJcptsjs" title="基础平台设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcKhdappsjs" id="fwcKhdappsjs" title="客户端(APP)设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcQdsjs" id="fwcQdsjs" title="前端设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcUisjs" id="fwcUisjs" title="UI设计师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcJavayfgcs" id="fwcJavayfgcs" title="java研发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcAzkfgcs" id="fwcAzkfgcs" title="安卓开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcPgkfgcs" id="fwcPgkfgcs" title="苹果开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcCkfgcs" id="fwcCkfgcs" title="C#开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcQdkfgcs" id="fwcQdkfgcs" title="前端开发工程师" checked></td></tr>
+                                <tr><td><input type="checkbox" name="fwcCsgcs" id="fwcCsgcs" title="测试工程师" checked></td></tr>
+                    </table>
+                    <div style="text-align: right;">
+                        <button class="layui-btn layui-btn-lg layui-btn-normal" id="btn_add_template"><i class="iconfont">&#xe747; </i> 新建合同模板</button></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function setFalse(idName) {
+                $('#'+idName).prop('checked', false);
+                $('#'+idName).prop('disabled', 'disabled');
+            }
+            function setTrue(idName) {
+                $('#'+idName).prop('checked', true);
+                $('#'+idName).prop('disabled', '');
+            }
+
+              layui.use('form', function () {
+                    var form = layui.form;
+                    form.on('checkbox(xqdy_Xqfxs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptXqfxs');
+                            setTrue('yycXqfxs');
+                            setTrue('jkcXqfxs');
+                            setTrue('fwcXqfxs');
+                        } else {
+                           setFalse('jcptXqfxs');
+                           setFalse('yycXqfxs');
+                           setFalse('jkcXqfxs');
+                           setFalse('fwcXqfxs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Yyjgsjs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptYyjgsjs');
+                            setTrue('yycYyjgsjs');
+                            setTrue('jkcYyjgsjs');
+                            setTrue('fwcYyjgsjs');
+                        } else {
+                            setFalse('jcptYyjgsjs');
+                            setFalse('yycYyjgsjs');
+                            setFalse('jkcYyjgsjs');
+                            setFalse('fwcYyjgsjs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Cpjl)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptCpjl');
+                            setTrue('yycCpjl');
+                            setTrue('jkcCpjl');
+                            setTrue('fwcCpjl');
+                        } else {
+                           setFalse('jcptCpjl');
+                           setFalse('yycCpjl');
+                           setFalse('jkcCpjl');
+                           setFalse('fwcCpjl');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Jcptsjs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptJcptsjs');
+                            setTrue('yycJcptsjs');
+                            setTrue('jkcJcptsjs');
+                            setTrue('fwcJcptsjs');
+                        } else {
+                            setFalse('jcptJcptsjs');
+                            setFalse('yycJcptsjs');
+                            setFalse('jkcJcptsjs');
+                            setFalse('fwcJcptsjs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Khdappsjs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptKhdappsjs');
+                            setTrue('yycKhdappsjs');
+                            setTrue('jkcKhdappsjs');
+                            setTrue('fwcKhdappsjs');
+                        } else {
+                           setFalse('jcptKhdappsjs');
+                           setFalse('yycKhdappsjs');
+                           setFalse('jkcKhdappsjs');
+                           setFalse('fwcKhdappsjs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Qdsjs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptQdsjs');
+                            setTrue('yycQdsjs');
+                            setTrue('jkcQdsjs');
+                            setTrue('fwcQdsjs');
+                        } else {
+                            setFalse('jcptQdsjs');
+                            setFalse('yycQdsjs');
+                            setFalse('jkcQdsjs');
+                            setFalse('fwcQdsjs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Uisjs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptUisjs');
+                            setTrue('yycUisjs');
+                            setTrue('jkcUisjs');
+                            setTrue('fwcUisjs');
+                        } else {
+                           setFalse('jcptUisjs');
+                           setFalse('yycUisjs');
+                           setFalse('jkcUisjs');
+                           setFalse('fwcUisjs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Javayfgcs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptJavayfgcs');
+                            setTrue('yycJavayfgcs');
+                            setTrue('jkcJavayfgcs');
+                            setTrue('fwcJavayfgcs');
+                        } else {
+                            setFalse('jcptJavayfgcs');
+                            setFalse('yycJavayfgcs');
+                            setFalse('jkcJavayfgcs');
+                            setFalse('fwcJavayfgcs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Azkfgcs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptAzkfgcs');
+                            setTrue('yycAzkfgcs');
+                            setTrue('jkcAzkfgcs');
+                            setTrue('fwcAzkfgcs');
+                        } else {
+                           setFalse('jcptAzkfgcs');
+                           setFalse('yycAzkfgcs');
+                           setFalse('jkcAzkfgcs');
+                           setFalse('fwcAzkfgcs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Pgkfgcs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptPgkfgcs');
+                            setTrue('yycPgkfgcs');
+                            setTrue('jkcPgkfgcs');
+                            setTrue('fwcPgkfgcs');
+                        } else {
+                            setFalse('jcptPgkfgcs');
+                            setFalse('yycPgkfgcs');
+                            setFalse('jkcPgkfgcs');
+                            setFalse('fwcPgkfgcs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Ckfgcs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptCkfgcs');
+                            setTrue('yycCkfgcs');
+                            setTrue('jkcCkfgcs');
+                            setTrue('fwcCkfgcs');
+                        } else {
+                           setFalse('jcptCkfgcs');
+                           setFalse('yycCkfgcs');
+                           setFalse('jkcCkfgcs');
+                           setFalse('fwcCkfgcs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtkf_Qdkfgcs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptQdkfgcs');
+                            setTrue('yycQdkfgcs');
+                            setTrue('jkcQdkfgcs');
+                            setTrue('fwcQdkfgcs');
+                        } else {
+                            setFalse('jcptQdkfgcs');
+                            setFalse('yycQdkfgcs');
+                            setFalse('jkcQdkfgcs');
+                            setFalse('fwcQdkfgcs');
+                        }
+                        form.render('checkbox');
+                    });
+                    form.on('checkbox(xtcs_Csgcs)', function (data) {
+                        if(data.elem.checked == true) {
+                            setTrue('jcptCsgcs');
+                            setTrue('yycCsgcs');
+                            setTrue('jkcCsgcs');
+                            setTrue('fwcCsgcs');
+                        } else {
+                           setFalse('jcptCsgcs');
+                           setFalse('yycCsgcs');
+                           setFalse('jkcCsgcs');
+                           setFalse('fwcCsgcs');
+                        }
+                        form.render('checkbox');
+                    });
+                });
+        </script>
+        <script>
+            function setNum(idName){
+                if($('#'+idName).prop("checked") == true){
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+            $('#btn_add_template').on("click",function () {
+                console.log(JSON.stringify({                        'modename': $('#modename').val(),
+                    'xqdyCpjl': setNum('xqdyCpjl'),
+                    'xqdyXqfxs': setNum('xqdyXqfxs'),
+                    'xtsjCpjl': setNum('xtsjCpjl'),
+                    'xtsjYyjgsjs': setNum('xtsjYyjgsjs'),
+                    'xtsjJcptsjs': setNum('xtsjJcptsjs'),
+                    'xtsjKhdappsjs': setNum('xtsjKhdappsjs'),
+                    'xtsjQdsjs': setNum('xtsjQdsjs'),
+                    'xtsjUisjs': setNum('xtsjUisjs'),
+                    'xtkfJavayfgcs': setNum('xtkfJavayfgcs'),
+                    'xtkfAzkfgcs': setNum('xtkfAzkfgcs'),
+                    'xtkfPgkfgcs': setNum('xtkfPgkfgcs'),
+                    'xtkfCkfgcs': setNum('xtkfCkfgcs'),
+                    'xtkfQdkfgcs': setNum('xtkfQdkfgcs'),
+                    'xtcsCsgcs': setNum('xtcsCsgcs'),
+                    'ywzcYwjl': setNum('ywzcYwjl'),
+                    'xtssSsgcs': setNum('xtssSsgcs'),
+                    'xmglXmzj': setNum('xmglXmzj'),
+                    'jsglJszj': setNum('jsglJszj'),
+                    'jcptCpjl': setNum('jcptCpjl'),
+                    'jcptXqfxs': setNum('jcptXqfxs'),
+                    'jcptYyjgsjs': setNum('jcptYyjgsjs'),
+                    'jcptJcptsjs': setNum('jcptJcptsjs'),
+                    'jcptKhdappsjs': setNum('jcptKhdappsjs'),
+                    'jcptQdsjs': setNum('jcptQdsjs'),
+                    'jcptUisjs': setNum('jcptUisjs'),
+                    'jcptJavayfgcs': setNum('jcptJavayfgcs'),
+                    'jcptAzkfgcs': setNum('jcptAzkfgcs'),
+                    'jcptPgkfgcs': setNum('jcptPgkfgcs'),
+                    'jcptCkfgcs': setNum('jcptCkfgcs'),
+                    'jcptQdkfgcs': setNum('jcptQdkfgcs'),
+                    'jcptCsgcs': setNum('jcptCsgcs'),
+                    'yycCpjl': setNum('yycCpjl'),
+                    'yycXqfxs': setNum('yycXqfxs'),
+                    'yycYyjgsjs': setNum('yycYyjgsjs'),
+                    'yycJcptsjs': setNum('yycJcptsjs'),
+                    'yycKhdappsjs': setNum('yycKhdappsjs'),
+                    'yycQdsjs': setNum('yycQdsjs'),
+                    'yycUisjs': setNum('yycUisjs'),
+                    'yycJavayfgcs': setNum('yycJavayfgcs'),
+                    'yycAzkfgcs': setNum('yycAzkfgcs'),
+                    'yycPgkfgcs': setNum('yycPgkfgcs'),
+                    'yycCkfgcs': setNum('yycCkfgcs'),
+                    'yycQdkfgcs': setNum('yycQdkfgcs'),
+                    'yycCsgcs': setNum('yycCsgcs'),
+                    'jkcCpjl': setNum('jkcCpjl'),
+                    'jkcXqfxs': setNum('jkcXqfxs'),
+                    'jkcYyjgsjs': setNum('jkcYyjgsjs'),
+                    'jkcJcptsjs': setNum('jkcJcptsjs'),
+                    'jkcKhdappsjs': setNum('jkcKhdappsjs'),
+                    'jkcQdsjs': setNum('jkcQdsjs'),
+                    'jkcUisjs': setNum('jkcUisjs'),
+                    'jkcJavayfgcs': setNum('jkcJavayfgcs'),
+                    'jkcAzkfgcs': setNum('jkcAzkfgcs'),
+                    'jkcPgkfgcs': setNum('jkcPgkfgcs'),
+                    'jkcCkfgcs': setNum('jkcCkfgcs'),
+                    'jkcQdkfgcs': setNum('jkcQdkfgcs'),
+                    'jkcCsgcs': setNum('jkcCsgcs'),
+                    'fwcCpjl': setNum('fwcCpjl'),
+                    'fwcXqfxs': setNum('fwcXqfxs'),
+                    'fwcYyjgsjs': setNum('fwcYyjgsjs'),
+                    'fwcJcptsjs': setNum('fwcJcptsjs'),
+                    'fwcKhdappsjs': setNum('fwcKhdappsjs'),
+                    'fwcQdsjs': setNum('fwcQdsjs'),
+                    'fwcUisjs': setNum('fwcUisjs'),
+                    'fwcJavayfgcs': setNum('fwcJavayfgcs'),
+                    'fwcAzkfgcs': setNum('fwcAzkfgcs'),
+                    'fwcPgkfgcs': setNum('fwcPgkfgcs'),
+                    'fwcCkfgcs': setNum('fwcCkfgcs'),
+                    'fwcQdkfgcs': setNum('fwcQdkfgcs'),
+                    'fwcCsgcs': setNum('fwcCsgcs')}))
+                $.ajax({
+                    type:'post',
+                    dateType: "json",
+                    contentType : "application/json",
+                    url:"/htMode/insertSelective?modelName="+$('#modename').val(),
+                    data:
+                        JSON.stringify({
+                        'modename': $('#modename').val(),
+                        'xqdyCpjl': setNum('xqdyCpjl'),
+                        'xqdyXqfxs': setNum('xqdyXqfxs'),
+                        'xtsjCpjl': setNum('xtsjCpjl'),
+                        'xtsjYyjgsjs': setNum('xtsjYyjgsjs'),
+                        'xtsjJcptsjs': setNum('xtsjJcptsjs'),
+                        'xtsjKhdappsjs': setNum('xtsjKhdappsjs'),
+                        'xtsjQdsjs': setNum('xtsjQdsjs'),
+                        'xtsjUisjs': setNum('xtsjUisjs'),
+                        'xtkfJavayfgcs': setNum('xtkfJavayfgcs'),
+                        'xtkfAzkfgcs': setNum('xtkfAzkfgcs'),
+                        'xtkfPgkfgcs': setNum('xtkfPgkfgcs'),
+                        'xtkfCkfgcs': setNum('xtkfCkfgcs'),
+                        'xtkfQdkfgcs': setNum('xtkfQdkfgcs'),
+                        'xtcsCsgcs': setNum('xtcsCsgcs'),
+                        'ywzcYwjl': setNum('ywzcYwjl'),
+                        'xtssSsgcs': setNum('xtssSsgcs'),
+                        'xmglXmzj': setNum('xmglXmzj'),
+                        'jsglJszj': setNum('jsglJszj'),
+                        'jcptCpjl': setNum('jcptCpjl'),
+                        'jcptXqfxs': setNum('jcptXqfxs'),
+                        'jcptYyjgsjs': setNum('jcptYyjgsjs'),
+                        'jcptJcptsjs': setNum('jcptJcptsjs'),
+                        'jcptKhdappsjs': setNum('jcptKhdappsjs'),
+                        'jcptQdsjs': setNum('jcptQdsjs'),
+                        'jcptUisjs': setNum('jcptUisjs'),
+                        'jcptJavayfgcs': setNum('jcptJavayfgcs'),
+                        'jcptAzkfgcs': setNum('jcptAzkfgcs'),
+                        'jcptPgkfgcs': setNum('jcptPgkfgcs'),
+                        'jcptCkfgcs': setNum('jcptCkfgcs'),
+                        'jcptQdkfgcs': setNum('jcptQdkfgcs'),
+                        'jcptCsgcs': setNum('jcptCsgcs'),
+                        'yycCpjl': setNum('yycCpjl'),
+                        'yycXqfxs': setNum('yycXqfxs'),
+                        'yycYyjgsjs': setNum('yycYyjgsjs'),
+                        'yycJcptsjs': setNum('yycJcptsjs'),
+                        'yycKhdappsjs': setNum('yycKhdappsjs'),
+                        'yycQdsjs': setNum('yycQdsjs'),
+                        'yycUisjs': setNum('yycUisjs'),
+                        'yycJavayfgcs': setNum('yycJavayfgcs'),
+                        'yycAzkfgcs': setNum('yycAzkfgcs'),
+                        'yycPgkfgcs': setNum('yycPgkfgcs'),
+                        'yycCkfgcs': setNum('yycCkfgcs'),
+                        'yycQdkfgcs': setNum('yycQdkfgcs'),
+                        'yycCsgcs': setNum('yycCsgcs'),
+                        'jkcCpjl': setNum('jkcCpjl'),
+                        'jkcXqfxs': setNum('jkcXqfxs'),
+                        'jkcYyjgsjs': setNum('jkcYyjgsjs'),
+                        'jkcJcptsjs': setNum('jkcJcptsjs'),
+                        'jkcKhdappsjs': setNum('jkcKhdappsjs'),
+                        'jkcQdsjs': setNum('jkcQdsjs'),
+                        'jkcUisjs': setNum('jkcUisjs'),
+                        'jkcJavayfgcs': setNum('jkcJavayfgcs'),
+                        'jkcAzkfgcs': setNum('jkcAzkfgcs'),
+                        'jkcPgkfgcs': setNum('jkcPgkfgcs'),
+                        'jkcCkfgcs': setNum('jkcCkfgcs'),
+                        'jkcQdkfgcs': setNum('jkcQdkfgcs'),
+                        'jkcCsgcs': setNum('jkcCsgcs'),
+                        'fwcCpjl': setNum('fwcCpjl'),
+                        'fwcXqfxs': setNum('fwcXqfxs'),
+                        'fwcYyjgsjs': setNum('fwcYyjgsjs'),
+                        'fwcJcptsjs': setNum('fwcJcptsjs'),
+                        'fwcKhdappsjs': setNum('fwcKhdappsjs'),
+                        'fwcQdsjs': setNum('fwcQdsjs'),
+                        'fwcUisjs': setNum('fwcUisjs'),
+                        'fwcJavayfgcs': setNum('fwcJavayfgcs'),
+                        'fwcAzkfgcs': setNum('fwcAzkfgcs'),
+                        'fwcPgkfgcs': setNum('fwcPgkfgcs'),
+                        'fwcCkfgcs': setNum('fwcCkfgcs'),
+                        'fwcQdkfgcs': setNum('fwcQdkfgcs'),
+                        'fwcCsgcs': setNum('fwcCsgcs')
+                        }),
+                    success:function(res){
+                        if(res == 'success') alert("新建成功");
+                        else ("新建失败");
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>
+

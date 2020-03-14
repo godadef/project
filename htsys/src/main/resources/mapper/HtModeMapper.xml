@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ht.htsys.dao.HtModeMapper" >
+  <resultMap id="BaseResultMap" type="com.ht.htsys.pojo.HtMode" >
+    <id column="modeId" property="modeid" jdbcType="INTEGER" />
+    <result column="modeName" property="modename" jdbcType="VARCHAR" />
+    <result column="xqdy_cpjl" property="xqdyCpjl" jdbcType="INTEGER" />
+    <result column="xqdy_xqfxs" property="xqdyXqfxs" jdbcType="INTEGER" />
+    <result column="xtsj_cpjl" property="xtsjCpjl" jdbcType="INTEGER" />
+    <result column="xtsj_yyjgsjs" property="xtsjYyjgsjs" jdbcType="INTEGER" />
+    <result column="xtsj_jcptsjs" property="xtsjJcptsjs" jdbcType="INTEGER" />
+    <result column="xtsj_khdapisjs" property="xtsjKhdapisjs" jdbcType="INTEGER" />
+    <result column="xtsj_qdsjfxs" property="xtsjQdsjfxs" jdbcType="INTEGER" />
+    <result column="xtsj_uisjs" property="xtsjUisjs" jdbcType="INTEGER" />
+    <result column="xtkf_javayfgcs" property="xtkfJavayfgcs" jdbcType="INTEGER" />
+    <result column="xtkf_azkfgcs" property="xtkfAzkfgcs" jdbcType="INTEGER" />
+    <result column="xtkf_pgkfgcs" property="xtkfPgkfgcs" jdbcType="INTEGER" />
+    <result column="xtkf_ckfgcs" property="xtkfCkfgcs" jdbcType="INTEGER" />
+    <result column="xtkf_qdkfgcs" property="xtkfQdkfgcs" jdbcType="INTEGER" />
+    <result column="xtcs_csgcs" property="xtcsCsgcs" jdbcType="INTEGER" />
+    <result column="ywzc_ywjl" property="ywzcYwjl" jdbcType="INTEGER" />
+    <result column="xtss_ssgcs" property="xtssSsgcs" jdbcType="INTEGER" />
+    <result column="xmgl_xmzj" property="xmglXmzj" jdbcType="INTEGER" />
+    <result column="jsgl_jszj" property="jsglJszj" jdbcType="INTEGER" />
+    <result column="jcpt_cpjl" property="jcptCpjl" jdbcType="INTEGER" />
+    <result column="jcpt_xqfxs" property="jcptXqfxs" jdbcType="INTEGER" />
+    <result column="jcpt_yyjgsjs" property="jcptYyjgsjs" jdbcType="INTEGER" />
+    <result column="jcpt_jcptsjs" property="jcptJcptsjs" jdbcType="INTEGER" />
+    <result column="jcpt_khdappsjs" property="jcptKhdappsjs" jdbcType="INTEGER" />
+    <result column="jcpt_qdsjsjs" property="jcptQdsjsjs" jdbcType="INTEGER" />
+    <result column="jcpt_uisjs" property="jcptUisjs" jdbcType="INTEGER" />
+    <result column="jcpt_javayfgcs" property="jcptJavayfgcs" jdbcType="INTEGER" />
+    <result column="jcpt_azkfgcs" property="jcptAzkfgcs" jdbcType="INTEGER" />
+    <result column="jcpt_pgkfgcs" property="jcptPgkfgcs" jdbcType="INTEGER" />
+    <result column="jcpt_ckfgcs" property="jcptCkfgcs" jdbcType="INTEGER" />
+    <result column="jcpt_qdkfgcs" property="jcptQdkfgcs" jdbcType="INTEGER" />
+    <result column="jcpt_csgcs" property="jcptCsgcs" jdbcType="INTEGER" />
+    <result column="yyc_cpjl" property="yycCpjl" jdbcType="INTEGER" />
+    <result column="yyc_xqfxs" property="yycXqfxs" jdbcType="INTEGER" />
+    <result column="yyc_yyjgsjs" property="yycYyjgsjs" jdbcType="INTEGER" />
+    <result column="yyc_jcptsjs" property="yycJcptsjs" jdbcType="INTEGER" />
+    <result column="yyc_khdappsjs" property="yycKhdappsjs" jdbcType="INTEGER" />
+    <result column="yyc_qdsjsjs" property="yycQdsjsjs" jdbcType="INTEGER" />
+    <result column="yyc_uisjs" property="yycUisjs" jdbcType="INTEGER" />
+    <result column="yyc_javayfgcs" property="yycJavayfgcs" jdbcType="INTEGER" />
+    <result column="yyc_azkfgcs" property="yycAzkfgcs" jdbcType="INTEGER" />
+    <result column="yyc_pgkfgcs" property="yycPgkfgcs" jdbcType="INTEGER" />
+    <result column="yyc_ckfgcs" property="yycCkfgcs" jdbcType="INTEGER" />
+    <result column="yyc_qdkfgcs" property="yycQdkfgcs" jdbcType="INTEGER" />
+    <result column="yyc_csgcs" property="yycCsgcs" jdbcType="INTEGER" />
+    <result column="jkc_cpjl" property="jkcCpjl" jdbcType="INTEGER" />
+    <result column="jkc_xqfxs" property="jkcXqfxs" jdbcType="INTEGER" />
+    <result column="jkc_yyjgsjs" property="jkcYyjgsjs" jdbcType="INTEGER" />
+    <result column="jkc_jcptsjs" property="jkcJcptsjs" jdbcType="INTEGER" />
+    <result column="jkc_khdappsjs" property="jkcKhdappsjs" jdbcType="INTEGER" />
+    <result column="jkc_qdsjsjs" property="jkcQdsjsjs" jdbcType="INTEGER" />
+    <result column="jkc_uisjs" property="jkcUisjs" jdbcType="INTEGER" />
+    <result column="jkc_javayfgcs" property="jkcJavayfgcs" jdbcType="INTEGER" />
+    <result column="jkc_azkfgcs" property="jkcAzkfgcs" jdbcType="INTEGER" />
+    <result column="jkc_pgkfgcs" property="jkcPgkfgcs" jdbcType="INTEGER" />
+    <result column="jkc_ckfgcs" property="jkcCkfgcs" jdbcType="INTEGER" />
+    <result column="jkc_qdkfgcs" property="jkcQdkfgcs" jdbcType="INTEGER" />
+    <result column="jkc_csgcs" property="jkcCsgcs" jdbcType="INTEGER" />
+    <result column="fwc_cpjl" property="fwcCpjl" jdbcType="INTEGER" />
+    <result column="fwc_xqfxs" property="fwcXqfxs" jdbcType="INTEGER" />
+    <result column="fwc_yyjgsjs" property="fwcYyjgsjs" jdbcType="INTEGER" />
+    <result column="fwc_jcptsjs" property="fwcJcptsjs" jdbcType="INTEGER" />
+    <result column="fwc_khdappsjs" property="fwcKhdappsjs" jdbcType="INTEGER" />
+    <result column="fwc_qdsjsjs" property="fwcQdsjsjs" jdbcType="INTEGER" />
+    <result column="fwc_uisjs" property="fwcUisjs" jdbcType="INTEGER" />
+    <result column="fwc_javayfgcs" property="fwcJavayfgcs" jdbcType="INTEGER" />
+    <result column="fwc_azkfgcs" property="fwcAzkfgcs" jdbcType="INTEGER" />
+    <result column="fwc_pgkfgcs" property="fwcPgkfgcs" jdbcType="INTEGER" />
+    <result column="fwc_ckfgcs" property="fwcCkfgcs" jdbcType="INTEGER" />
+    <result column="fwc_qdkfgcs" property="fwcQdkfgcs" jdbcType="INTEGER" />
+    <result column="fwc_csgcs" property="fwcCsgcs" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    modeId, modeName, xqdy_cpjl, xqdy_xqfxs, xtsj_cpjl, xtsj_yyjgsjs, xtsj_jcptsjs, xtsj_khdapisjs, 
+    xtsj_qdsjfxs, xtsj_uisjs, xtkf_javayfgcs, xtkf_azkfgcs, xtkf_pgkfgcs, xtkf_ckfgcs, 
+    xtkf_qdkfgcs, xtcs_csgcs, ywzc_ywjl, xtss_ssgcs, xmgl_xmzj, jsgl_jszj, jcpt_cpjl, 
+    jcpt_xqfxs, jcpt_yyjgsjs, jcpt_jcptsjs, jcpt_khdappsjs, jcpt_qdsjsjs, jcpt_uisjs, 
+    jcpt_javayfgcs, jcpt_azkfgcs, jcpt_pgkfgcs, jcpt_ckfgcs, jcpt_qdkfgcs, jcpt_csgcs, 
+    yyc_cpjl, yyc_xqfxs, yyc_yyjgsjs, yyc_jcptsjs, yyc_khdappsjs, yyc_qdsjsjs, yyc_uisjs, 
+    yyc_javayfgcs, yyc_azkfgcs, yyc_pgkfgcs, yyc_ckfgcs, yyc_qdkfgcs, yyc_csgcs, jkc_cpjl, 
+    jkc_xqfxs, jkc_yyjgsjs, jkc_jcptsjs, jkc_khdappsjs, jkc_qdsjsjs, jkc_uisjs, jkc_javayfgcs, 
+    jkc_azkfgcs, jkc_pgkfgcs, jkc_ckfgcs, jkc_qdkfgcs, jkc_csgcs, fwc_cpjl, fwc_xqfxs, 
+    fwc_yyjgsjs, fwc_jcptsjs, fwc_khdappsjs, fwc_qdsjsjs, fwc_uisjs, fwc_javayfgcs, fwc_azkfgcs, 
+    fwc_pgkfgcs, fwc_ckfgcs, fwc_qdkfgcs, fwc_csgcs
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from ht_mode
+    where modeId = #{modeid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from ht_mode
+    where modeId = #{modeid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ht.htsys.pojo.HtMode" >
+    insert into ht_mode (modeId, modeName, xqdy_cpjl, 
+      xqdy_xqfxs, xtsj_cpjl, xtsj_yyjgsjs, 
+      xtsj_jcptsjs, xtsj_khdapisjs, xtsj_qdsjfxs, 
+      xtsj_uisjs, xtkf_javayfgcs, xtkf_azkfgcs, 
+      xtkf_pgkfgcs, xtkf_ckfgcs, xtkf_qdkfgcs, 
+      xtcs_csgcs, ywzc_ywjl, xtss_ssgcs, 
+      xmgl_xmzj, jsgl_jszj, jcpt_cpjl, 
+      jcpt_xqfxs, jcpt_yyjgsjs, jcpt_jcptsjs, 
+      jcpt_khdappsjs, jcpt_qdsjsjs, jcpt_uisjs, 
+      jcpt_javayfgcs, jcpt_azkfgcs, jcpt_pgkfgcs, 
+      jcpt_ckfgcs, jcpt_qdkfgcs, jcpt_csgcs, 
+      yyc_cpjl, yyc_xqfxs, yyc_yyjgsjs, 
+      yyc_jcptsjs, yyc_khdappsjs, yyc_qdsjsjs, 
+      yyc_uisjs, yyc_javayfgcs, yyc_azkfgcs, 
+      yyc_pgkfgcs, yyc_ckfgcs, yyc_qdkfgcs, 
+      yyc_csgcs, jkc_cpjl, jkc_xqfxs, 
+      jkc_yyjgsjs, jkc_jcptsjs, jkc_khdappsjs, 
+      jkc_qdsjsjs, jkc_uisjs, jkc_javayfgcs, 
+      jkc_azkfgcs, jkc_pgkfgcs, jkc_ckfgcs, 
+      jkc_qdkfgcs, jkc_csgcs, fwc_cpjl, 
+      fwc_xqfxs, fwc_yyjgsjs, fwc_jcptsjs, 
+      fwc_khdappsjs, fwc_qdsjsjs, fwc_uisjs, 
+      fwc_javayfgcs, fwc_azkfgcs, fwc_pgkfgcs, 
+      fwc_ckfgcs, fwc_qdkfgcs, fwc_csgcs
+      )
+    values (#{modeid,jdbcType=INTEGER}, #{modename,jdbcType=VARCHAR}, #{xqdyCpjl,jdbcType=INTEGER}, 
+      #{xqdyXqfxs,jdbcType=INTEGER}, #{xtsjCpjl,jdbcType=INTEGER}, #{xtsjYyjgsjs,jdbcType=INTEGER}, 
+      #{xtsjJcptsjs,jdbcType=INTEGER}, #{xtsjKhdapisjs,jdbcType=INTEGER}, #{xtsjQdsjfxs,jdbcType=INTEGER}, 
+      #{xtsjUisjs,jdbcType=INTEGER}, #{xtkfJavayfgcs,jdbcType=INTEGER}, #{xtkfAzkfgcs,jdbcType=INTEGER}, 
+      #{xtkfPgkfgcs,jdbcType=INTEGER}, #{xtkfCkfgcs,jdbcType=INTEGER}, #{xtkfQdkfgcs,jdbcType=INTEGER}, 
+      #{xtcsCsgcs,jdbcType=INTEGER}, #{ywzcYwjl,jdbcType=INTEGER}, #{xtssSsgcs,jdbcType=INTEGER}, 
+      #{xmglXmzj,jdbcType=INTEGER}, #{jsglJszj,jdbcType=INTEGER}, #{jcptCpjl,jdbcType=INTEGER}, 
+      #{jcptXqfxs,jdbcType=INTEGER}, #{jcptYyjgsjs,jdbcType=INTEGER}, #{jcptJcptsjs,jdbcType=INTEGER}, 
+      #{jcptKhdappsjs,jdbcType=INTEGER}, #{jcptQdsjsjs,jdbcType=INTEGER}, #{jcptUisjs,jdbcType=INTEGER}, 
+      #{jcptJavayfgcs,jdbcType=INTEGER}, #{jcptAzkfgcs,jdbcType=INTEGER}, #{jcptPgkfgcs,jdbcType=INTEGER}, 
+      #{jcptCkfgcs,jdbcType=INTEGER}, #{jcptQdkfgcs,jdbcType=INTEGER}, #{jcptCsgcs,jdbcType=INTEGER}, 
+      #{yycCpjl,jdbcType=INTEGER}, #{yycXqfxs,jdbcType=INTEGER}, #{yycYyjgsjs,jdbcType=INTEGER}, 
+      #{yycJcptsjs,jdbcType=INTEGER}, #{yycKhdappsjs,jdbcType=INTEGER}, #{yycQdsjsjs,jdbcType=INTEGER}, 
+      #{yycUisjs,jdbcType=INTEGER}, #{yycJavayfgcs,jdbcType=INTEGER}, #{yycAzkfgcs,jdbcType=INTEGER}, 
+      #{yycPgkfgcs,jdbcType=INTEGER}, #{yycCkfgcs,jdbcType=INTEGER}, #{yycQdkfgcs,jdbcType=INTEGER}, 
+      #{yycCsgcs,jdbcType=INTEGER}, #{jkcCpjl,jdbcType=INTEGER}, #{jkcXqfxs,jdbcType=INTEGER}, 
+      #{jkcYyjgsjs,jdbcType=INTEGER}, #{jkcJcptsjs,jdbcType=INTEGER}, #{jkcKhdappsjs,jdbcType=INTEGER}, 
+      #{jkcQdsjsjs,jdbcType=INTEGER}, #{jkcUisjs,jdbcType=INTEGER}, #{jkcJavayfgcs,jdbcType=INTEGER}, 
+      #{jkcAzkfgcs,jdbcType=INTEGER}, #{jkcPgkfgcs,jdbcType=INTEGER}, #{jkcCkfgcs,jdbcType=INTEGER}, 
+      #{jkcQdkfgcs,jdbcType=INTEGER}, #{jkcCsgcs,jdbcType=INTEGER}, #{fwcCpjl,jdbcType=INTEGER}, 
+      #{fwcXqfxs,jdbcType=INTEGER}, #{fwcYyjgsjs,jdbcType=INTEGER}, #{fwcJcptsjs,jdbcType=INTEGER}, 
+      #{fwcKhdappsjs,jdbcType=INTEGER}, #{fwcQdsjsjs,jdbcType=INTEGER}, #{fwcUisjs,jdbcType=INTEGER}, 
+      #{fwcJavayfgcs,jdbcType=INTEGER}, #{fwcAzkfgcs,jdbcType=INTEGER}, #{fwcPgkfgcs,jdbcType=INTEGER}, 
+      #{fwcCkfgcs,jdbcType=INTEGER}, #{fwcQdkfgcs,jdbcType=INTEGER}, #{fwcCsgcs,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ht.htsys.pojo.HtMode" >
+    insert into ht_mode
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="modeid != null" >
+        modeId,
+      </if>
+      <if test="modename != null" >
+        modeName,
+      </if>
+      <if test="xqdyCpjl != null" >
+        xqdy_cpjl,
+      </if>
+      <if test="xqdyXqfxs != null" >
+        xqdy_xqfxs,
+      </if>
+      <if test="xtsjCpjl != null" >
+        xtsj_cpjl,
+      </if>
+      <if test="xtsjYyjgsjs != null" >
+        xtsj_yyjgsjs,
+      </if>
+      <if test="xtsjJcptsjs != null" >
+        xtsj_jcptsjs,
+      </if>
+      <if test="xtsjKhdapisjs != null" >
+        xtsj_khdapisjs,
+      </if>
+      <if test="xtsjQdsjfxs != null" >
+        xtsj_qdsjfxs,
+      </if>
+      <if test="xtsjUisjs != null" >
+        xtsj_uisjs,
+      </if>
+      <if test="xtkfJavayfgcs != null" >
+        xtkf_javayfgcs,
+      </if>
+      <if test="xtkfAzkfgcs != null" >
+        xtkf_azkfgcs,
+      </if>
+      <if test="xtkfPgkfgcs != null" >
+        xtkf_pgkfgcs,
+      </if>
+      <if test="xtkfCkfgcs != null" >
+        xtkf_ckfgcs,
+      </if>
+      <if test="xtkfQdkfgcs != null" >
+        xtkf_qdkfgcs,
+      </if>
+      <if test="xtcsCsgcs != null" >
+        xtcs_csgcs,
+      </if>
+      <if test="ywzcYwjl != null" >
+        ywzc_ywjl,
+      </if>
+      <if test="xtssSsgcs != null" >
+        xtss_ssgcs,
+      </if>
+      <if test="xmglXmzj != null" >
+        xmgl_xmzj,
+      </if>
+      <if test="jsglJszj != null" >
+        jsgl_jszj,
+      </if>
+      <if test="jcptCpjl != null" >
+        jcpt_cpjl,
+      </if>
+      <if test="jcptXqfxs != null" >
+        jcpt_xqfxs,
+      </if>
+      <if test="jcptYyjgsjs != null" >
+        jcpt_yyjgsjs,
+      </if>
+      <if test="jcptJcptsjs != null" >
+        jcpt_jcptsjs,
+      </if>
+      <if test="jcptKhdappsjs != null" >
+        jcpt_khdappsjs,
+      </if>
+      <if test="jcptQdsjsjs != null" >
+        jcpt_qdsjsjs,
+      </if>
+      <if test="jcptUisjs != null" >
+        jcpt_uisjs,
+      </if>
+      <if test="jcptJavayfgcs != null" >
+        jcpt_javayfgcs,
+      </if>
+      <if test="jcptAzkfgcs != null" >
+        jcpt_azkfgcs,
+      </if>
+      <if test="jcptPgkfgcs != null" >
+        jcpt_pgkfgcs,
+      </if>
+      <if test="jcptCkfgcs != null" >
+        jcpt_ckfgcs,
+      </if>
+      <if test="jcptQdkfgcs != null" >
+        jcpt_qdkfgcs,
+      </if>
+      <if test="jcptCsgcs != null" >
+        jcpt_csgcs,
+      </if>
+      <if test="yycCpjl != null" >
+        yyc_cpjl,
+      </if>
+      <if test="yycXqfxs != null" >
+        yyc_xqfxs,
+      </if>
+      <if test="yycYyjgsjs != null" >
+        yyc_yyjgsjs,
+      </if>
+      <if test="yycJcptsjs != null" >
+        yyc_jcptsjs,
+      </if>
+      <if test="yycKhdappsjs != null" >
+        yyc_khdappsjs,
+      </if>
+      <if test="yycQdsjsjs != null" >
+        yyc_qdsjsjs,
+      </if>
+      <if test="yycUisjs != null" >
+        yyc_uisjs,
+      </if>
+      <if test="yycJavayfgcs != null" >
+        yyc_javayfgcs,
+      </if>
+      <if test="yycAzkfgcs != null" >
+        yyc_azkfgcs,
+      </if>
+      <if test="yycPgkfgcs != null" >
+        yyc_pgkfgcs,
+      </if>
+      <if test="yycCkfgcs != null" >
+        yyc_ckfgcs,
+      </if>
+      <if test="yycQdkfgcs != null" >
+        yyc_qdkfgcs,
+      </if>
+      <if test="yycCsgcs != null" >
+        yyc_csgcs,
+      </if>
+      <if test="jkcCpjl != null" >
+        jkc_cpjl,
+      </if>
+      <if test="jkcXqfxs != null" >
+        jkc_xqfxs,
+      </if>
+      <if test="jkcYyjgsjs != null" >
+        jkc_yyjgsjs,
+      </if>
+      <if test="jkcJcptsjs != null" >
+        jkc_jcptsjs,
+      </if>
+      <if test="jkcKhdappsjs != null" >
+        jkc_khdappsjs,
+      </if>
+      <if test="jkcQdsjsjs != null" >
+        jkc_qdsjsjs,
+      </if>
+      <if test="jkcUisjs != null" >
+        jkc_uisjs,
+      </if>
+      <if test="jkcJavayfgcs != null" >
+        jkc_javayfgcs,
+      </if>
+      <if test="jkcAzkfgcs != null" >
+        jkc_azkfgcs,
+      </if>
+      <if test="jkcPgkfgcs != null" >
+        jkc_pgkfgcs,
+      </if>
+      <if test="jkcCkfgcs != null" >
+        jkc_ckfgcs,
+      </if>
+      <if test="jkcQdkfgcs != null" >
+        jkc_qdkfgcs,
+      </if>
+      <if test="jkcCsgcs != null" >
+        jkc_csgcs,
+      </if>
+      <if test="fwcCpjl != null" >
+        fwc_cpjl,
+      </if>
+      <if test="fwcXqfxs != null" >
+        fwc_xqfxs,
+      </if>
+      <if test="fwcYyjgsjs != null" >
+        fwc_yyjgsjs,
+      </if>
+      <if test="fwcJcptsjs != null" >
+        fwc_jcptsjs,
+      </if>
+      <if test="fwcKhdappsjs != null" >
+        fwc_khdappsjs,
+      </if>
+      <if test="fwcQdsjsjs != null" >
+        fwc_qdsjsjs,
+      </if>
+      <if test="fwcUisjs != null" >
+        fwc_uisjs,
+      </if>
+      <if test="fwcJavayfgcs != null" >
+        fwc_javayfgcs,
+      </if>
+      <if test="fwcAzkfgcs != null" >
+        fwc_azkfgcs,
+      </if>
+      <if test="fwcPgkfgcs != null" >
+        fwc_pgkfgcs,
+      </if>
+      <if test="fwcCkfgcs != null" >
+        fwc_ckfgcs,
+      </if>
+      <if test="fwcQdkfgcs != null" >
+        fwc_qdkfgcs,
+      </if>
+      <if test="fwcCsgcs != null" >
+        fwc_csgcs,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="modeid != null" >
+        #{modeid,jdbcType=INTEGER},
+      </if>
+      <if test="modename != null" >
+        #{modename,jdbcType=VARCHAR},
+      </if>
+      <if test="xqdyCpjl != null" >
+        #{xqdyCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="xqdyXqfxs != null" >
+        #{xqdyXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjCpjl != null" >
+        #{xtsjCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjYyjgsjs != null" >
+        #{xtsjYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjJcptsjs != null" >
+        #{xtsjJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjKhdapisjs != null" >
+        #{xtsjKhdapisjs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjQdsjfxs != null" >
+        #{xtsjQdsjfxs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjUisjs != null" >
+        #{xtsjUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfJavayfgcs != null" >
+        #{xtkfJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfAzkfgcs != null" >
+        #{xtkfAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfPgkfgcs != null" >
+        #{xtkfPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfCkfgcs != null" >
+        #{xtkfCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfQdkfgcs != null" >
+        #{xtkfQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtcsCsgcs != null" >
+        #{xtcsCsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="ywzcYwjl != null" >
+        #{ywzcYwjl,jdbcType=INTEGER},
+      </if>
+      <if test="xtssSsgcs != null" >
+        #{xtssSsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xmglXmzj != null" >
+        #{xmglXmzj,jdbcType=INTEGER},
+      </if>
+      <if test="jsglJszj != null" >
+        #{jsglJszj,jdbcType=INTEGER},
+      </if>
+      <if test="jcptCpjl != null" >
+        #{jcptCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="jcptXqfxs != null" >
+        #{jcptXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptYyjgsjs != null" >
+        #{jcptYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptJcptsjs != null" >
+        #{jcptJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptKhdappsjs != null" >
+        #{jcptKhdappsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptQdsjsjs != null" >
+        #{jcptQdsjsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptUisjs != null" >
+        #{jcptUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptJavayfgcs != null" >
+        #{jcptJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptAzkfgcs != null" >
+        #{jcptAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptPgkfgcs != null" >
+        #{jcptPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptCkfgcs != null" >
+        #{jcptCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptQdkfgcs != null" >
+        #{jcptQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptCsgcs != null" >
+        #{jcptCsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycCpjl != null" >
+        #{yycCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="yycXqfxs != null" >
+        #{yycXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="yycYyjgsjs != null" >
+        #{yycYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycJcptsjs != null" >
+        #{yycJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycKhdappsjs != null" >
+        #{yycKhdappsjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycQdsjsjs != null" >
+        #{yycQdsjsjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycUisjs != null" >
+        #{yycUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycJavayfgcs != null" >
+        #{yycJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycAzkfgcs != null" >
+        #{yycAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycPgkfgcs != null" >
+        #{yycPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycCkfgcs != null" >
+        #{yycCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycQdkfgcs != null" >
+        #{yycQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycCsgcs != null" >
+        #{yycCsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcCpjl != null" >
+        #{jkcCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="jkcXqfxs != null" >
+        #{jkcXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcYyjgsjs != null" >
+        #{jkcYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcJcptsjs != null" >
+        #{jkcJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcKhdappsjs != null" >
+        #{jkcKhdappsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcQdsjsjs != null" >
+        #{jkcQdsjsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcUisjs != null" >
+        #{jkcUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcJavayfgcs != null" >
+        #{jkcJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcAzkfgcs != null" >
+        #{jkcAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcPgkfgcs != null" >
+        #{jkcPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcCkfgcs != null" >
+        #{jkcCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcQdkfgcs != null" >
+        #{jkcQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcCsgcs != null" >
+        #{jkcCsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcCpjl != null" >
+        #{fwcCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="fwcXqfxs != null" >
+        #{fwcXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcYyjgsjs != null" >
+        #{fwcYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcJcptsjs != null" >
+        #{fwcJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcKhdappsjs != null" >
+        #{fwcKhdappsjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcQdsjsjs != null" >
+        #{fwcQdsjsjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcUisjs != null" >
+        #{fwcUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcJavayfgcs != null" >
+        #{fwcJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcAzkfgcs != null" >
+        #{fwcAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcPgkfgcs != null" >
+        #{fwcPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcCkfgcs != null" >
+        #{fwcCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcQdkfgcs != null" >
+        #{fwcQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcCsgcs != null" >
+        #{fwcCsgcs,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ht.htsys.pojo.HtMode" >
+    update ht_mode
+    <set >
+      <if test="modename != null" >
+        modeName = #{modename,jdbcType=VARCHAR},
+      </if>
+      <if test="xqdyCpjl != null" >
+        xqdy_cpjl = #{xqdyCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="xqdyXqfxs != null" >
+        xqdy_xqfxs = #{xqdyXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjCpjl != null" >
+        xtsj_cpjl = #{xtsjCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjYyjgsjs != null" >
+        xtsj_yyjgsjs = #{xtsjYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjJcptsjs != null" >
+        xtsj_jcptsjs = #{xtsjJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjKhdapisjs != null" >
+        xtsj_khdapisjs = #{xtsjKhdapisjs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjQdsjfxs != null" >
+        xtsj_qdsjfxs = #{xtsjQdsjfxs,jdbcType=INTEGER},
+      </if>
+      <if test="xtsjUisjs != null" >
+        xtsj_uisjs = #{xtsjUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfJavayfgcs != null" >
+        xtkf_javayfgcs = #{xtkfJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfAzkfgcs != null" >
+        xtkf_azkfgcs = #{xtkfAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfPgkfgcs != null" >
+        xtkf_pgkfgcs = #{xtkfPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfCkfgcs != null" >
+        xtkf_ckfgcs = #{xtkfCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtkfQdkfgcs != null" >
+        xtkf_qdkfgcs = #{xtkfQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xtcsCsgcs != null" >
+        xtcs_csgcs = #{xtcsCsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="ywzcYwjl != null" >
+        ywzc_ywjl = #{ywzcYwjl,jdbcType=INTEGER},
+      </if>
+      <if test="xtssSsgcs != null" >
+        xtss_ssgcs = #{xtssSsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="xmglXmzj != null" >
+        xmgl_xmzj = #{xmglXmzj,jdbcType=INTEGER},
+      </if>
+      <if test="jsglJszj != null" >
+        jsgl_jszj = #{jsglJszj,jdbcType=INTEGER},
+      </if>
+      <if test="jcptCpjl != null" >
+        jcpt_cpjl = #{jcptCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="jcptXqfxs != null" >
+        jcpt_xqfxs = #{jcptXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptYyjgsjs != null" >
+        jcpt_yyjgsjs = #{jcptYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptJcptsjs != null" >
+        jcpt_jcptsjs = #{jcptJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptKhdappsjs != null" >
+        jcpt_khdappsjs = #{jcptKhdappsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptQdsjsjs != null" >
+        jcpt_qdsjsjs = #{jcptQdsjsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptUisjs != null" >
+        jcpt_uisjs = #{jcptUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptJavayfgcs != null" >
+        jcpt_javayfgcs = #{jcptJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptAzkfgcs != null" >
+        jcpt_azkfgcs = #{jcptAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptPgkfgcs != null" >
+        jcpt_pgkfgcs = #{jcptPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptCkfgcs != null" >
+        jcpt_ckfgcs = #{jcptCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptQdkfgcs != null" >
+        jcpt_qdkfgcs = #{jcptQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jcptCsgcs != null" >
+        jcpt_csgcs = #{jcptCsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycCpjl != null" >
+        yyc_cpjl = #{yycCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="yycXqfxs != null" >
+        yyc_xqfxs = #{yycXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="yycYyjgsjs != null" >
+        yyc_yyjgsjs = #{yycYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycJcptsjs != null" >
+        yyc_jcptsjs = #{yycJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycKhdappsjs != null" >
+        yyc_khdappsjs = #{yycKhdappsjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycQdsjsjs != null" >
+        yyc_qdsjsjs = #{yycQdsjsjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycUisjs != null" >
+        yyc_uisjs = #{yycUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="yycJavayfgcs != null" >
+        yyc_javayfgcs = #{yycJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycAzkfgcs != null" >
+        yyc_azkfgcs = #{yycAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycPgkfgcs != null" >
+        yyc_pgkfgcs = #{yycPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycCkfgcs != null" >
+        yyc_ckfgcs = #{yycCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycQdkfgcs != null" >
+        yyc_qdkfgcs = #{yycQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="yycCsgcs != null" >
+        yyc_csgcs = #{yycCsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcCpjl != null" >
+        jkc_cpjl = #{jkcCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="jkcXqfxs != null" >
+        jkc_xqfxs = #{jkcXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcYyjgsjs != null" >
+        jkc_yyjgsjs = #{jkcYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcJcptsjs != null" >
+        jkc_jcptsjs = #{jkcJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcKhdappsjs != null" >
+        jkc_khdappsjs = #{jkcKhdappsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcQdsjsjs != null" >
+        jkc_qdsjsjs = #{jkcQdsjsjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcUisjs != null" >
+        jkc_uisjs = #{jkcUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcJavayfgcs != null" >
+        jkc_javayfgcs = #{jkcJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcAzkfgcs != null" >
+        jkc_azkfgcs = #{jkcAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcPgkfgcs != null" >
+        jkc_pgkfgcs = #{jkcPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcCkfgcs != null" >
+        jkc_ckfgcs = #{jkcCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcQdkfgcs != null" >
+        jkc_qdkfgcs = #{jkcQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="jkcCsgcs != null" >
+        jkc_csgcs = #{jkcCsgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcCpjl != null" >
+        fwc_cpjl = #{fwcCpjl,jdbcType=INTEGER},
+      </if>
+      <if test="fwcXqfxs != null" >
+        fwc_xqfxs = #{fwcXqfxs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcYyjgsjs != null" >
+        fwc_yyjgsjs = #{fwcYyjgsjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcJcptsjs != null" >
+        fwc_jcptsjs = #{fwcJcptsjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcKhdappsjs != null" >
+        fwc_khdappsjs = #{fwcKhdappsjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcQdsjsjs != null" >
+        fwc_qdsjsjs = #{fwcQdsjsjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcUisjs != null" >
+        fwc_uisjs = #{fwcUisjs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcJavayfgcs != null" >
+        fwc_javayfgcs = #{fwcJavayfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcAzkfgcs != null" >
+        fwc_azkfgcs = #{fwcAzkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcPgkfgcs != null" >
+        fwc_pgkfgcs = #{fwcPgkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcCkfgcs != null" >
+        fwc_ckfgcs = #{fwcCkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcQdkfgcs != null" >
+        fwc_qdkfgcs = #{fwcQdkfgcs,jdbcType=INTEGER},
+      </if>
+      <if test="fwcCsgcs != null" >
+        fwc_csgcs = #{fwcCsgcs,jdbcType=INTEGER},
+      </if>
+    </set>
+    where modeId = #{modeid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ht.htsys.pojo.HtMode" >
+    update ht_mode
+    set modeName = #{modename,jdbcType=VARCHAR},
+      xqdy_cpjl = #{xqdyCpjl,jdbcType=INTEGER},
+      xqdy_xqfxs = #{xqdyXqfxs,jdbcType=INTEGER},
+      xtsj_cpjl = #{xtsjCpjl,jdbcType=INTEGER},
+      xtsj_yyjgsjs = #{xtsjYyjgsjs,jdbcType=INTEGER},
+      xtsj_jcptsjs = #{xtsjJcptsjs,jdbcType=INTEGER},
+      xtsj_khdapisjs = #{xtsjKhdapisjs,jdbcType=INTEGER},
+      xtsj_qdsjfxs = #{xtsjQdsjfxs,jdbcType=INTEGER},
+      xtsj_uisjs = #{xtsjUisjs,jdbcType=INTEGER},
+      xtkf_javayfgcs = #{xtkfJavayfgcs,jdbcType=INTEGER},
+      xtkf_azkfgcs = #{xtkfAzkfgcs,jdbcType=INTEGER},
+      xtkf_pgkfgcs = #{xtkfPgkfgcs,jdbcType=INTEGER},
+      xtkf_ckfgcs = #{xtkfCkfgcs,jdbcType=INTEGER},
+      xtkf_qdkfgcs = #{xtkfQdkfgcs,jdbcType=INTEGER},
+      xtcs_csgcs = #{xtcsCsgcs,jdbcType=INTEGER},
+      ywzc_ywjl = #{ywzcYwjl,jdbcType=INTEGER},
+      xtss_ssgcs = #{xtssSsgcs,jdbcType=INTEGER},
+      xmgl_xmzj = #{xmglXmzj,jdbcType=INTEGER},
+      jsgl_jszj = #{jsglJszj,jdbcType=INTEGER},
+      jcpt_cpjl = #{jcptCpjl,jdbcType=INTEGER},
+      jcpt_xqfxs = #{jcptXqfxs,jdbcType=INTEGER},
+      jcpt_yyjgsjs = #{jcptYyjgsjs,jdbcType=INTEGER},
+      jcpt_jcptsjs = #{jcptJcptsjs,jdbcType=INTEGER},
+      jcpt_khdappsjs = #{jcptKhdappsjs,jdbcType=INTEGER},
+      jcpt_qdsjsjs = #{jcptQdsjsjs,jdbcType=INTEGER},
+      jcpt_uisjs = #{jcptUisjs,jdbcType=INTEGER},
+      jcpt_javayfgcs = #{jcptJavayfgcs,jdbcType=INTEGER},
+      jcpt_azkfgcs = #{jcptAzkfgcs,jdbcType=INTEGER},
+      jcpt_pgkfgcs = #{jcptPgkfgcs,jdbcType=INTEGER},
+      jcpt_ckfgcs = #{jcptCkfgcs,jdbcType=INTEGER},
+      jcpt_qdkfgcs = #{jcptQdkfgcs,jdbcType=INTEGER},
+      jcpt_csgcs = #{jcptCsgcs,jdbcType=INTEGER},
+      yyc_cpjl = #{yycCpjl,jdbcType=INTEGER},
+      yyc_xqfxs = #{yycXqfxs,jdbcType=INTEGER},
+      yyc_yyjgsjs = #{yycYyjgsjs,jdbcType=INTEGER},
+      yyc_jcptsjs = #{yycJcptsjs,jdbcType=INTEGER},
+      yyc_khdappsjs = #{yycKhdappsjs,jdbcType=INTEGER},
+      yyc_qdsjsjs = #{yycQdsjsjs,jdbcType=INTEGER},
+      yyc_uisjs = #{yycUisjs,jdbcType=INTEGER},
+      yyc_javayfgcs = #{yycJavayfgcs,jdbcType=INTEGER},
+      yyc_azkfgcs = #{yycAzkfgcs,jdbcType=INTEGER},
+      yyc_pgkfgcs = #{yycPgkfgcs,jdbcType=INTEGER},
+      yyc_ckfgcs = #{yycCkfgcs,jdbcType=INTEGER},
+      yyc_qdkfgcs = #{yycQdkfgcs,jdbcType=INTEGER},
+      yyc_csgcs = #{yycCsgcs,jdbcType=INTEGER},
+      jkc_cpjl = #{jkcCpjl,jdbcType=INTEGER},
+      jkc_xqfxs = #{jkcXqfxs,jdbcType=INTEGER},
+      jkc_yyjgsjs = #{jkcYyjgsjs,jdbcType=INTEGER},
+      jkc_jcptsjs = #{jkcJcptsjs,jdbcType=INTEGER},
+      jkc_khdappsjs = #{jkcKhdappsjs,jdbcType=INTEGER},
+      jkc_qdsjsjs = #{jkcQdsjsjs,jdbcType=INTEGER},
+      jkc_uisjs = #{jkcUisjs,jdbcType=INTEGER},
+      jkc_javayfgcs = #{jkcJavayfgcs,jdbcType=INTEGER},
+      jkc_azkfgcs = #{jkcAzkfgcs,jdbcType=INTEGER},
+      jkc_pgkfgcs = #{jkcPgkfgcs,jdbcType=INTEGER},
+      jkc_ckfgcs = #{jkcCkfgcs,jdbcType=INTEGER},
+      jkc_qdkfgcs = #{jkcQdkfgcs,jdbcType=INTEGER},
+      jkc_csgcs = #{jkcCsgcs,jdbcType=INTEGER},
+      fwc_cpjl = #{fwcCpjl,jdbcType=INTEGER},
+      fwc_xqfxs = #{fwcXqfxs,jdbcType=INTEGER},
+      fwc_yyjgsjs = #{fwcYyjgsjs,jdbcType=INTEGER},
+      fwc_jcptsjs = #{fwcJcptsjs,jdbcType=INTEGER},
+      fwc_khdappsjs = #{fwcKhdappsjs,jdbcType=INTEGER},
+      fwc_qdsjsjs = #{fwcQdsjsjs,jdbcType=INTEGER},
+      fwc_uisjs = #{fwcUisjs,jdbcType=INTEGER},
+      fwc_javayfgcs = #{fwcJavayfgcs,jdbcType=INTEGER},
+      fwc_azkfgcs = #{fwcAzkfgcs,jdbcType=INTEGER},
+      fwc_pgkfgcs = #{fwcPgkfgcs,jdbcType=INTEGER},
+      fwc_ckfgcs = #{fwcCkfgcs,jdbcType=INTEGER},
+      fwc_qdkfgcs = #{fwcQdkfgcs,jdbcType=INTEGER},
+      fwc_csgcs = #{fwcCsgcs,jdbcType=INTEGER}
+    where modeId = #{modeid,jdbcType=INTEGER}
+  </update>
+  <select id="selectAllHtMode" resultMap="BaseResultMap">
+      select * from ht_mode
+  </select>
+  <select id="selectByHtMode" resultMap="BaseResultMap" parameterType="com.ht.htsys.pojo.HtMode">
+      select * from ht_mode
+      <where>
+        <if test="modeid!=null and modeid!=''">
+          and modeId = #{modeid}
+        </if>
+        <if test="modename!=null and modename!=''">
+          and modeName like concat('%',#{modename},'%')
+        </if>
+      </where>
+  </select>
+  <select id="countHtModeByMap" resultType="int" parameterType="map">
+    select count(1) from ht_mode
+    <where>
+      <if test="modeName!=null and modeName!=''">
+        and modeName like concat('%',#{modeName},'%')
+      </if>
+      <if test="modeId!=null and modeId!=''">
+        and modeId = #{modeId}
+      </if>
+    </where>
+  </select>
+  <select id="getOnePageInfo" resultMap="BaseResultMap" parameterType="map">
+    select * from ht_mode
+    <where>
+      <if test="modeName!=null and modeName!=''">
+        and modeName like concat('%',#{modeName},'%')
+      </if>
+      <if test="modeId!=null and modeId!=''">
+        and modeId = #{modeId}
+      </if>
+    </where>
+    limit #{startLimitPos},#{pageSize}
+  </select>
+
+
+</mapper>

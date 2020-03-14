@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ht.htsys.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.ht.htsys.pojo.User" >
+    <id column="userId" property="userid" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="tag" property="tag" jdbcType="VARCHAR" />
+    <result column="position" property="position" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    userId, username, password, phone, tag, position
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tbs_user
+    where userId = #{userid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tbs_user
+    where userId = #{userid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ht.htsys.pojo.User" >
+    insert into tbs_user (userId, username, password, 
+      phone, tag, position
+      )
+    values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ht.htsys.pojo.User" >
+    insert into tbs_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        userId,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="tag != null" >
+        tag,
+      </if>
+      <if test="position != null" >
+        position,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="tag != null" >
+        #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null" >
+        #{position,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ht.htsys.pojo.User" >
+    update tbs_user
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="tag != null" >
+        tag = #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null" >
+        position = #{position,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where userId = #{userid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ht.htsys.pojo.User" >
+    update tbs_user
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      tag = #{tag,jdbcType=VARCHAR},
+      position = #{position,jdbcType=VARCHAR}
+    where userId = #{userid,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectByUser" resultMap="BaseResultMap" parameterType="com.ht.htsys.pojo.User">
+    select * from tbs_user
+    <where>
+      <if test="userid!=null and userid!=''">
+        and userId = #{userid}
+      </if>
+      <if test="nickname!=null and nickname!=''">
+        and nickname like concat('%',#{nickname},'%')
+      </if>
+    </where>
+  </select>
+  <select id="countUserByMap" resultType="int" parameterType="map">
+    select count(1) from tbs_user
+    <where>
+      <if test="userName!=null and userName!=''">
+        and username like concat('%',#{userName},'%')
+      </if>
+      <if test="phone!=null and phone!=''">
+        and phone like concat(#{phone},'%')
+      </if>
+      <if test="tag!=null and tag!=''">
+      and tag like concat('%',#{tag},'%')
+      </if>
+    </where>
+  </select>
+  <select id="getOnePageInfo" resultMap="BaseResultMap" parameterType="map">
+    select * from tbs_user
+    <where>
+      <if test="userName!=null and userName!=''">
+        and username like concat('%',#{userName},'%')
+      </if>
+      <if test="phone!=null and phone!=''">
+        and phone like concat(#{phone},'%')
+      </if>
+      <if test="tag!=null and tag!=''">
+        and tag like concat('%',#{tag},'%')
+      </if>
+    </where>
+    limit #{startLimitPos},#{pageSize}
+  </select>
+</mapper>

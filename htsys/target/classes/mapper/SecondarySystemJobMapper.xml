@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ht.htsys.dao.SecondarySystemJobMapper">
+    <select id="selectjobByLevel1SystemIdAndtypeId" resultType="com.ht.htsys.pojo.SecondarySystemJob" parameterType="map">
+        select j.money,j.num,j.site,j.planDay,j.totalDay from tbs_secondary_system s,tbs_secondary_system_job j
+        where s.secondarySystemId=j.SecondarySystemId and s.tableId=#{level1SystemId} and s.typeId=#{typeId}
+    </select>
+
+</mapper>

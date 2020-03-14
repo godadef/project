@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.2</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/xadmin.css">
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./js/xadmin.js"></script>
+        <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+            <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]--></head>
+    <body>
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <table class="layui-table layui-form">
+                        <tr align="center">
+                            <td style="font-size: 16px;">模板名称</td>
+                            <td><input type="text" name="modename" id="modename" class="layui-input" placeholder="请输入模板名称" required></td>
+                        </tr>
+                        <tr align="center">
+                            <td rowspan="2" style="font-size: 16px;">需求调研</td>
+                                <td align="left"><input type="checkbox" name="xqdyCpjl" id="xqdyCpjl" title="产品经理"></td></tr>
+                                <tr><td><input type="checkbox" name="xqdyXqfxs" id="xqdyXqfxs" title="需求分析师"></td></tr>
+                        <tr align="center">
+                            <td rowspan="6" style="font-size: 16px;">系统设计</td>
+                                <td align="left"><input type="checkbox" name="xtsjCpjl" id="xtsjCpjl" title="产品经理"></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjYyjgsjs" id="xtsjYyjgsjs" title="应用架构师"></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjJcptsjs" id="xtsjJcptsjs" title="基础平台设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjKhdapisjs" id="xtsjKhdapisjs" title="客户端(APP)设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjQdsjfxs" id="xtsjQdsjfxs" title="前端设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="xtsjUisjs" id="xtsjUisjs" title="UI设计师"></td></tr>
+                        <tr align="center">
+                            <td rowspan="5" style="font-size: 16px;">系统开发</td>
+                                <td align="left"><input type="checkbox" name="xtkfJavayfgcs" id="xtkfJavayfgcs" title="java研发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="xtkfAzkfgcs" id="xtkfAzkfgcs" title="安卓开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="xtkfPgkfgcs" id="xtkfPgkfgcs" title="苹果开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="xtkfCkfgcs" id="xtkfCkfgcs" title="C#开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="xtkfQdkfgcs" id="xtkfQdkfgcs" title="前端开发工程师"></td></tr>
+                        <tr align="center"><td align="center" style="font-size: 16px;">系统测试</td>
+                            <td align="left"><input type="checkbox" name="xtcsCsgcs" id="xtcsCsgcs" title="测试工程师"></td></tr>
+                        <tr align="center"><td style="font-size: 16px;">业务支撑</td>
+                            <td align="left"><input type="checkbox" name="ywzcYwjl" id="ywzcYwjl" title="业务经理"></td></tr>
+                        <tr align="center"><td style="font-size: 16px;">系统实施</td>
+                            <td align="left"><input type="checkbox" name="xtssSsgcs" id="xtssSsgcs" title="实施工程师"></td></tr>
+                        <tr align="center"><td style="font-size: 16px;">项目管理</td>
+                            <td align="left" style="font-size: 16px;"><input type="checkbox" name="xmglXmzj" id="xmglXmzj" title="项目总监"></td></tr>
+                        <tr align="center"><td style="font-size: 16px;">技术管理</td>
+                            <td align="left"><input type="checkbox" name="jsglJszj" id="jsglJszj" title="技术总监"></td></tr>
+                        <tr align="center">
+                            <td rowspan="13" style="font-size: 16px;">二级系统——基础平台</td>
+                                <td align="left"><input type="checkbox" name="jcptCpjl" id="jcptCpjl" title="产品经理"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptXqfxs" id="jcptXqfxs" title="需求分析师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptYyjgsjs" id="jcptYyjgsjs" title="应用架构师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptJcptsjs" id="jcptJcptsjs" title="基础平台设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptKhdappsjs" id="jcptKhdappsjs" title="客户端(APP)设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptQdsjsjs" id="jcptQdsjsjs" title="前端设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptUisjs" id="jcptUisjs" title="UI设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptJavayfgcs" id="jcptJavayfgcs" title="java研发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptAzkfgcs" id="jcptAzkfgcs" title="安卓开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptPgkfgcs" id="jcptPgkfgcs" title="苹果开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptCkfgcs" id="jcptCkfgcs" title="C#开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptQdkfgcs" id="jcptQdkfgcs" title="前端开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jcptCsgcs" id="jcptCsgcs" title="测试工程师"></td></tr>
+                        <tr align="center">
+                            <td rowspan="13" style="font-size: 16px;">二级系统——应用层</td>
+                                <td align="left"><input type="checkbox" name="yycCpjl" id="yycCpjl" title="产品经理"></td></tr>
+                                <tr><td><input type="checkbox" name="yycXqfxs" id="yycXqfxs" title="需求分析师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycYyjgsjs" id="yycYyjgsjs" title="应用架构师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycYycsjs" id="yycJcptsjs" title="基础平台设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycKhdappsjs" id="yycKhdappsjs" title="客户端(APP)设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycQdsjsjs" id="yycQdsjsjs" title="前端设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycUisjs" id="yycUisjs" title="UI设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycJavayfgcs" id="yycJavayfgcs" title="java研发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycAzkfgcs" id="yycAzkfgcs" title="安卓开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycPgkfgcs" id="yycPgkfgcs" title="苹果开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycCkfgcs" id="yycCkfgcs" title="C#开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycQdkfgcs" id="yycQdkfgcs" title="前端开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="yycCsgcs" id="yycCsgcs" title="测试工程师"></td></tr>
+                        <tr align="center">
+                            <td rowspan="13" style="font-size: 16px;">二级系统——接口层</td>
+                                <td align="left"><input type="checkbox" name="jkcCpjl" id="jkcCpjl" title="产品经理"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcXqfxs" id="jkcXqfxs" title="需求分析师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcYyjgsjs" id="jkcYyjgsjs" title="应用架构师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcJkcsjs" id="jkcJcptsjs" title="基础平台设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcKhdappsjs" id="jkcKhdappsjs" title="客户端(APP)设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcQdsjsjs" id="jkcQdsjsjs" title="前端设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcUisjs" id="jkcUisjs" title="UI设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcJavayfgcs" id="jkcJavayfgcs" title="java研发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcAzkfgcs" id="jkcAzkfgcs" title="安卓开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcPgkfgcs" id="jkcPgkfgcs" title="苹果开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcCkfgcs" id="jkcCkfgcs" title="C#开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcQdkfgcs" id="jkcQdkfgcs" title="前端开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="jkcCsgcs" id="jkcCsgcs" title="测试工程师"></td></tr>
+
+                        <tr align="center">
+                            <td rowspan="13" style="font-size: 16px;">二级系统——服务层</td>
+                                <td align="left"><input type="checkbox" name="fwcCpjl" id="fwcCpjl" title="产品经理"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcXqfxs" id="fwcXqfxs" title="需求分析师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcYyjgsjs" id="fwcYyjgsjs" title="应用架构师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcJcptsjs" id="fwcJcptsjs" title="基础平台设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcKhdappsjs" id="fwcKhdappsjs" title="客户端(APP)设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcQdsjsjs" id="fwcQdsjsjs" title="前端设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcUisjs" id="fwcUisjs" title="UI设计师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcJavayfgcs" id="fwcJavayfgcs" title="java研发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcAzkfgcs" id="fwcAzkfgcs" title="安卓开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcPgkfgcs" id="fwcPgkfgcs" title="苹果开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcCkfgcs" id="fwcCkfgcs" title="C#开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcQdkfgcs" id="fwcQdkfgcs" title="前端开发工程师"></td></tr>
+                                <tr><td><input type="checkbox" name="fwcCsgcs" id="fwcCsgcs" title="测试工程师"></td></tr>
+                    </table>
+                    <div style="text-align: right;">
+                        <button class="layui-btn layui-btn-lg layui-btn-normal" lay-submit lay-filter="change_template" id="btn_edit_template"><i class="iconfont">&#xe747; </i> 修改模板</button></div>
+                </div>
+            </div>
+        </div>
+       <script>layui.use(['form'],function (){});
+            function GetRequest() {
+                var url = location.search; //获取url中"?"符后的字串
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1);
+                    strs = str.split("&");
+                    for (var i = 0; i < strs.length; i++) {
+                        theRequest[strs[i].split("=")[0]] = decodeURIComponent(strs[i].split("=")[1]);
+                    }
+                }
+                return theRequest;
+            }
+            function setStyle(data, arr){
+                console.log(arr + "  " + data);
+                if(data) $('#'+arr).attr("checked", "checked");
+                if(data) $('#'+arr).prop("checked",true);
+            }
+           function setNum(idName){
+               //console.log(idName + ".check=" + $('#'+idName).prop("checked"));
+               if($('#'+idName).prop("checked") == true){
+                   return 1;
+               } else {
+                   return null;
+               }
+           }
+        </script>
+        <script>
+            var a=GetRequest();
+            var modeId=a['modeId'];
+            $.ajax({
+                url:"/htMode/selectByPrimaryKey",
+                data: {
+                    'modeid' : modeId
+                },
+                success:function(info){
+                    alert("加载数据");
+                    $('#modename').val(info.modename),
+                    setStyle(info.xqdyCpjl, 'xqdyCpjl');
+                    setStyle(info.xqdyXqfxs, 'xqdyXqfxs');
+                    setStyle(info.xtsjCpjl, 'xtsjCpjl');
+                    setStyle(info.xtsjYyjgsjs, 'xtsjYyjgsjs');
+                    setStyle(info.xtsjJcptsjs, 'xtsjJcptsjs');
+                    setStyle(info.xtsjKhdapisjs, 'xtsjKhdapisjs');
+                    setStyle(info.xtsjQdsjfxs, 'xtsjQdsjfxs');
+                    setStyle(info.xtsjUisjs, 'xtsjUisjs');
+                    setStyle(info.xtkfJavayfgcs, 'xtkfJavayfgcs');
+                    setStyle(info.xtkfAzkfgcs, 'xtkfAzkfgcs');
+                    setStyle(info.xtkfPgkfgcs, 'xtkfPgkfgcs');
+                    setStyle(info.xtkfCkfgcs, 'xtkfCkfgcs');
+                    setStyle(info.xtkfQdkfgcs, 'xtkfQdkfgcs');
+                    setStyle(info.xtcsCsgcs, 'xtcsCsgcs');
+                    setStyle(info.ywzcYwjl, 'ywzcYwjl');
+                    setStyle(info.xtssSsgcs, 'xtssSsgcs');
+                    setStyle(info.xmglXmzj, 'xmglXmzj');
+                    setStyle(info.jsglJszj, 'jsglJszj');
+                    setStyle(info.jcptCpjl, 'jcptCpjl');
+                    setStyle(info.jcptXqfxs, 'jcptXqfxs');
+                    setStyle(info.jcptYyjgsjs, 'jcptYyjgsjs');
+                    setStyle(info.jcptJcptsjs, 'jcptJcptsjs');
+                    setStyle(info.jcptKhdappsjs, 'jcptKhdappsjs');
+                    setStyle(info.jcptQdsjsjs, 'jcptQdsjsjs');
+                    setStyle(info.jcptUisjs, 'jcptUisjs');
+                    setStyle(info.jcptJavayfgcs, 'jcptJavayfgcs');
+                    setStyle(info.jcptAzkfgcs, 'jcptAzkfgcs');
+                    setStyle(info.jcptPgkfgcs, 'jcptPgkfgcs');
+                    setStyle(info.jcptCkfgcs, 'jcptCkfgcs');
+                    setStyle(info.jcptQdkfgcs, 'jcptQdkfgcs');
+                    setStyle(info.jcptCsgcs, 'jcptCsgcs');
+                    setStyle(info.yycCpjl, 'yycCpjl');
+                    setStyle(info.yycXqfxs, 'yycXqfxs');
+                    setStyle(info.yycYyjgsjs, 'yycYyjgsjs');
+                    setStyle(info.yycJcptsjs, 'yycJcptsjs');
+                    setStyle(info.yycKhdappsjs, 'yycKhdappsjs');
+                    setStyle(info.yycQdsjsjs, 'yycQdsjsjs');
+                    setStyle(info.yycUisjs, 'yycUisjs');
+                    setStyle(info.yycJavayfgcs, 'yycJavayfgcs');
+                    setStyle(info.yycAzkfgcs, 'yycAzkfgcs');
+                    setStyle(info.yycPgkfgcs, 'yycPgkfgcs');
+                    setStyle(info.yycCkfgcs, 'yycCkfgcs');
+                    setStyle(info.yycQdkfgcs, 'yycQdkfgcs');
+                    setStyle(info.yycCsgcs, 'yycCsgcs');
+                    setStyle(info.jkcCpjl, 'jkcCpjl');
+                    setStyle(info.jkcXqfxs, 'jkcXqfxs');
+                    setStyle(info.jkcYyjgsjs, 'jkcYyjgsjs');
+                    setStyle(info.jkcJcptsjs, 'jkcJcptsjs');
+                    setStyle(info.jkcKhdappsjs, 'jkcKhdappsjs');
+                    setStyle(info.jkcQdsjsjs, 'jkcQdsjsjs');
+                    setStyle(info.jkcUisjs, 'jkcUisjs');
+                    setStyle(info.jkcJavayfgcs, 'jkcJavayfgcs');
+                    setStyle(info.jkcAzkfgcs, 'jkcAzkfgcs');
+                    setStyle(info.jkcPgkfgcs, 'jkcPgkfgcs');
+                    setStyle(info.jkcCkfgcs, 'jkcCkfgcs');
+                    setStyle(info.jkcQdkfgcs, 'jkcQdkfgcs');
+                    setStyle(info.jkcCsgcs, 'jkcCsgcs');
+                    setStyle(info.fwcCpjl, 'fwcCpjl');
+                    setStyle(info.fwcXqfxs, 'fwcXqfxs');
+                    setStyle(info.fwcYyjgsjs, 'fwcYyjgsjs');
+                    setStyle(info.fwcJcptsjs, 'fwcJcptsjs');
+                    setStyle(info.fwcKhdappsjs, 'fwcKhdappsjs');
+                    setStyle(info.fwcQdsjsjs, 'fwcQdsjsjs');
+                    setStyle(info.fwcUisjs, 'fwcUisjs');
+                    setStyle(info.fwcJavayfgcs, 'fwcJavayfgcs');
+                    setStyle(info.fwcAzkfgcs, 'fwcAzkfgcs');
+                    setStyle(info.fwcPgkfgcs, 'fwcPgkfgcs');
+                    setStyle(info.fwcCkfgcs, 'fwcCkfgcs');
+                    setStyle(info.fwcQdkfgcs, 'fwcQdkfgcs');
+                    setStyle(info.fwcCsgcs, 'fwcCsgcs');
+                }
+            });
+        </script>
+    <!--    <script>
+            var a=GetRequest();
+            var modeId=a['modeId'];
+            ('#btn_edit_template').on("click",function () {
+                $.ajax({
+                    type: 'post',
+                    dataType: "json",
+                    processData:false,
+                    contentType : "application/json",
+                    url:"/htMode/updateByPrimaryKeySelective?modelName="+$('#modename').val(),
+                    data: JSON.stringify({
+                        'modeid': modeId,
+                        'xqdyCpjl' : setNum('xqdyCpjl'),
+                        'xqdyXqfxs' : setNum('xqdyXqfxs'),
+                        'xtsjCpjl' : setNum('xtsjCpjl'),
+                        'xtsjYyjgsjs' : setNum('xtsjYyjgsjs'),
+                        'xtsjJcptsjs' : setNum('xtsjJcptsjs'),
+                        'xtsjKhdapisjs' : setNum('xtsjKhdapisjs'),
+                        'xtsjQdsjfxs' : setNum('xtsjQdsjfxs'),
+                        'xtsjUisjs' : setNum('xtsjUisjs'),
+                        'xtkfJavayfgcs' : setNum('xtkfJavayfgcs'),
+                        'xtkfAzkfgcs' : setNum('xtkfAzkfgcs'),
+                        'xtkfPgkfgcs' : setNum('xtkfPgkfgcs'),
+                        'xtkfCkfgcs' : setNum('xtkfCkfgcs'),
+                        'xtkfQdkfgcs' : setNum('xtkfQdkfgcs'),
+                        'xtcsCsgcs' : setNum('xtcsCsgcs'),
+                        'ywzcYwjl' : setNum('ywzcYwjl'),
+                        'xtssSsgcs' : setNum('xtssSsgcs'),
+                        'xmglXmzj' : setNum('xmglXmzj'),
+                        'jsglJszj' : setNum('jsglJszj'),
+                        'jcptCpjl' : setNum('jcptCpjl'),
+                        'jcptXqfxs' : setNum('jcptXqfxs'),
+                        'jcptYyjgsjs' : setNum('jcptYyjgsjs'),
+                        'jcptJcptsjs' : setNum('jcptJcptsjs'),
+                        'jcptKhdappsjs' : setNum('jcptKhdappsjs'),
+                        'jcptQdsjsjs' : setNum('jcptQdsjsjs'),
+                        'jcptUisjs' : setNum('jcptUisjs'),
+                        'jcptJavayfgcs' : setNum('jcptJavayfgcs'),
+                        'jcptAzkfgcs' : setNum('jcptAzkfgcs'),
+                        'jcptPgkfgcs' : setNum('jcptPgkfgcs'),
+                        'jcptCkfgcs' : setNum('jcptCkfgcs'),
+                        'jcptQdkfgcs' : setNum('jcptQdkfgcs'),
+                        'jcptCsgcs' : setNum('jcptCsgcs'),
+                        'yycCpjl' : setNum('yycCpjl'),
+                        'yycXqfxs' : setNum('yycXqfxs'),
+                        'yycYyjgsjs' : setNum('yycYyjgsjs'),
+                        'yycJcptsjs' : setNum('yycJcptsjs'),
+                        'yycKhdappsjs' : setNum('yycKhdappsjs'),
+                        'yycQdsjsjs' : setNum('yycQdsjsjs'),
+                        'yycUisjs' : setNum('yycUisjs'),
+                        'yycJavayfgcs' : setNum('yycJavayfgcs'),
+                        'yycAzkfgcs' : setNum('yycAzkfgcs'),
+                        'yycPgkfgcs' : setNum('yycPgkfgcs'),
+                        'yycCkfgcs' : setNum('yycCkfgcs'),
+                        'yycQdkfgcs' : setNum('yycQdkfgcs'),
+                        'yycCsgcs' : setNum('yycCsgcs'),
+                        'jkcCpjl' : setNum('jkcCpjl'),
+                        'jkcXqfxs' : setNum('jkcXqfxs'),
+                        'jkcYyjgsjs' : setNum('jkcYyjgsjs'),
+                        'jkcJcptsjs' : setNum('jkcJcptsjs'),
+                        'jkcKhdappsjs' : setNum('jkcKhdappsjs'),
+                        'jkcQdsjsjs' : setNum('jkcQdsjsjs'),
+                        'jkcUisjs' : setNum('jkcUisjs'),
+                        'jkcJavayfgcs' : setNum('jkcJavayfgcs'),
+                        'jkcAzkfgcs' : setNum('jkcAzkfgcs'),
+                        'jkcPgkfgcs' : setNum('jkcPgkfgcs'),
+                        'jkcCkfgcs' : setNum('jkcCkfgcs'),
+                        'jkcQdkfgcs' : setNum('jkcQdkfgcs'),
+                        'jkcCsgcs' : setNum('jkcCsgcs'),
+                        'fwcCpjl' : setNum('fwcCpjl'),
+                        'fwcXqfxs' : setNum('fwcXqfxs'),
+                        'fwcYyjgsjs' : setNum('fwcYyjgsjs'),
+                        'fwcJcptsjs' : setNum('fwcJcptsjs'),
+                        'fwcKhdappsjs' : setNum('fwcKhdappsjs'),
+                        'fwcQdsjsjs' : setNum('fwcQdsjsjs'),
+                        'fwcUisjs' : setNum('fwcUisjs'),
+                        'fwcJavayfgcs' : setNum('fwcJavayfgcs'),
+                        'fwcAzkfgcs' : setNum('fwcAzkfgcs'),
+                        'fwcPgkfgcs' : setNum('fwcPgkfgcs'),
+                        'fwcCkfgcs' : setNum('fwcCkfgcs'),
+                        'fwcQdkfgcs' : setNum('fwcQdkfgcs'),
+                        'fwcCsgcs' : setNum('fwcCsgcs')
+                    }),
+                    //},
+                    success: function(res){
+                        if(res == 'success') alert("编辑成功");
+                        else ("编辑失败");
+                    }
+                });
+            })$
+        </script>-->
+<script>
+    $(function  () {
+        layui.use('form', function(){
+            var a=GetRequest();
+            var modeId=a['modeId'];
+            var form = layui.form;
+            form.on('submit(change_template)', function(data){
+                layer.confirm('是否要修改该模板信息?', {icon: 3, title:'警告'}, function(index) {
+                    $.ajax({
+                        type: 'post',
+                        dataType: "json",
+                        processData:false,
+                        contentType : "application/json",
+                        url:"/htMode/updateByPrimaryKeySelective?modelName="+$('#modename').val(),
+                        data: JSON.stringify({
+                            'modeid': modeId,
+                            'xqdyCpjl' : setNum('xqdyCpjl'),
+                            'xqdyXqfxs' : setNum('xqdyXqfxs'),
+                            'xtsjCpjl' : setNum('xtsjCpjl'),
+                            'xtsjYyjgsjs' : setNum('xtsjYyjgsjs'),
+                            'xtsjJcptsjs' : setNum('xtsjJcptsjs'),
+                            'xtsjKhdapisjs' : setNum('xtsjKhdapisjs'),
+                            'xtsjQdsjfxs' : setNum('xtsjQdsjfxs'),
+                            'xtsjUisjs' : setNum('xtsjUisjs'),
+                            'xtkfJavayfgcs' : setNum('xtkfJavayfgcs'),
+                            'xtkfAzkfgcs' : setNum('xtkfAzkfgcs'),
+                            'xtkfPgkfgcs' : setNum('xtkfPgkfgcs'),
+                            'xtkfCkfgcs' : setNum('xtkfCkfgcs'),
+                            'xtkfQdkfgcs' : setNum('xtkfQdkfgcs'),
+                            'xtcsCsgcs' : setNum('xtcsCsgcs'),
+                            'ywzcYwjl' : setNum('ywzcYwjl'),
+                            'xtssSsgcs' : setNum('xtssSsgcs'),
+                            'xmglXmzj' : setNum('xmglXmzj'),
+                            'jsglJszj' : setNum('jsglJszj'),
+                            'jcptCpjl' : setNum('jcptCpjl'),
+                            'jcptXqfxs' : setNum('jcptXqfxs'),
+                            'jcptYyjgsjs' : setNum('jcptYyjgsjs'),
+                            'jcptJcptsjs' : setNum('jcptJcptsjs'),
+                            'jcptKhdappsjs' : setNum('jcptKhdappsjs'),
+                            'jcptQdsjsjs' : setNum('jcptQdsjsjs'),
+                            'jcptUisjs' : setNum('jcptUisjs'),
+                            'jcptJavayfgcs' : setNum('jcptJavayfgcs'),
+                            'jcptAzkfgcs' : setNum('jcptAzkfgcs'),
+                            'jcptPgkfgcs' : setNum('jcptPgkfgcs'),
+                            'jcptCkfgcs' : setNum('jcptCkfgcs'),
+                            'jcptQdkfgcs' : setNum('jcptQdkfgcs'),
+                            'jcptCsgcs' : setNum('jcptCsgcs'),
+                            'yycCpjl' : setNum('yycCpjl'),
+                            'yycXqfxs' : setNum('yycXqfxs'),
+                            'yycYyjgsjs' : setNum('yycYyjgsjs'),
+                            'yycJcptsjs' : setNum('yycJcptsjs'),
+                            'yycKhdappsjs' : setNum('yycKhdappsjs'),
+                            'yycQdsjsjs' : setNum('yycQdsjsjs'),
+                            'yycUisjs' : setNum('yycUisjs'),
+                            'yycJavayfgcs' : setNum('yycJavayfgcs'),
+                            'yycAzkfgcs' : setNum('yycAzkfgcs'),
+                            'yycPgkfgcs' : setNum('yycPgkfgcs'),
+                            'yycCkfgcs' : setNum('yycCkfgcs'),
+                            'yycQdkfgcs' : setNum('yycQdkfgcs'),
+                            'yycCsgcs' : setNum('yycCsgcs'),
+                            'jkcCpjl' : setNum('jkcCpjl'),
+                            'jkcXqfxs' : setNum('jkcXqfxs'),
+                            'jkcYyjgsjs' : setNum('jkcYyjgsjs'),
+                            'jkcJcptsjs' : setNum('jkcJcptsjs'),
+                            'jkcKhdappsjs' : setNum('jkcKhdappsjs'),
+                            'jkcQdsjsjs' : setNum('jkcQdsjsjs'),
+                            'jkcUisjs' : setNum('jkcUisjs'),
+                            'jkcJavayfgcs' : setNum('jkcJavayfgcs'),
+                            'jkcAzkfgcs' : setNum('jkcAzkfgcs'),
+                            'jkcPgkfgcs' : setNum('jkcPgkfgcs'),
+                            'jkcCkfgcs' : setNum('jkcCkfgcs'),
+                            'jkcQdkfgcs' : setNum('jkcQdkfgcs'),
+                            'jkcCsgcs' : setNum('jkcCsgcs'),
+                            'fwcCpjl' : setNum('fwcCpjl'),
+                            'fwcXqfxs' : setNum('fwcXqfxs'),
+                            'fwcYyjgsjs' : setNum('fwcYyjgsjs'),
+                            'fwcJcptsjs' : setNum('fwcJcptsjs'),
+                            'fwcKhdappsjs' : setNum('fwcKhdappsjs'),
+                            'fwcQdsjsjs' : setNum('fwcQdsjsjs'),
+                            'fwcUisjs' : setNum('fwcUisjs'),
+                            'fwcJavayfgcs' : setNum('fwcJavayfgcs'),
+                            'fwcAzkfgcs' : setNum('fwcAzkfgcs'),
+                            'fwcPgkfgcs' : setNum('fwcPgkfgcs'),
+                            'fwcCkfgcs' : setNum('fwcCkfgcs'),
+                            'fwcQdkfgcs' : setNum('fwcQdkfgcs'),
+                            'fwcCsgcs' : setNum('fwcCsgcs')
+                        }),
+                        error: function (res) {
+                            console.log(res.responseText);
+                            if(res.responseText == 'success') {
+                                layer.msg("修改成功！ 页面即将关闭！ ");
+                                var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+                                console.log(index);
+                                setTimeout(
+                                    function(){
+                                        parent.layer.close(index);//关闭弹出的子页面窗口*!/
+                                    },1000)
+                            } else {
+                                layer.msg('修改失败');
+                            }
+                        }
+                    })
+                    layer.close(index);
+                });
+                return false;
+            });
+        });
+    })
+</script>
+    </body>
+</html>
+
+

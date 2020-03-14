@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.2</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/xadmin.css">
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="./js/xadmin.js"></script>
+        <script type="text/javascript" src="./js/xcity.js"></script>
+        <style type="text/css" media="screen">
+            .layui-form-label-small {
+                float: left;
+                padding-top: 9px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #F08080;
+            }
+            td {
+                text-align: center;
+                vertical-align: center;
+            }
+            .btn-checked {
+                background-color: #5FB878;
+            }
+            .btn-hidden {
+                display: none;
+            }
+        </style>
+        <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+        <!--[if lt IE 9]>
+            <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+            <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]--></head>
+    <body>
+        <div class="layui-fluid">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="table_1">
+                        <form class="layui-form">
+                            <span style="font-size: 16px; color: #0000CD;">表格1</span>
+                            <div class="layui-form-item" style="padding-top: 10px;">
+                                <label for="L_email" class="layui-form-label">
+                                <span class="x-red">*</span>项目名称</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="L_email" required="" name="email" class="layui-input"></div></div>
+                            <div class="layui-form-item">
+                                <label for="L_email" class="layui-form-label">
+                                <span class="x-red">*</span>客户名称</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="L_email" name="email" required="" autocomplete="off" class="layui-input"></div></div>
+                            <div class="layui-form-item">
+                                <label for="L_email" class="layui-form-label">
+                                <span class="x-red">*</span>客户项目负责人信息</label>
+                                <div class="layui-input-inline" style="width: 220px;">
+                                    <span class="layui-form-label-small">姓名&nbsp;&nbsp;</span>
+                                    <input type="text" id="L_email" name="email" autocomplete="off" class="layui-input" style="width: 160px;"></div>
+                                    <div class="layui-input-inline" style="width: 220px;">
+                                        <span class="layui-form-label-small">电话&nbsp;&nbsp;</span>
+                                        <input type="text" id="L_email" name="email" autocomplete="off" class="layui-input"
+                                        style="width: 160px;"></div>
+                                    <div class="layui-input-inline" style="width: 220px;">
+                                        <span class="layui-form-label-small">邮箱&nbsp;&nbsp;</span>
+                                        <input type="text" id="L_email" name="email" lay-verify="email" autocomplete="off" class="layui-input" style="width: 160px;"></div></div>
+                                        <div class="layui-form-item">
+                                        <label for="L_email" class="layui-form-label">
+                                            <span class="x-red">*</span>交付时间、地点</label>
+                                        <div class="layui-input-inline" style="width: 220px;">
+                                            <span class="layui-form-label-small">时间&nbsp;&nbsp;</span>
+                                            <input type="layui-input" autocomplete="off" placeholder="截止日" name="end" id="end" class="layui-input" style="width: 160px;"></div>
+                                            <div class="layui-input-inline" style="width: 700px;">
+                                                <div class="layui-form-item x-city" id="site">
+                                                  <span class="layui-form-label-small">地点&nbsp;&nbsp;</span>
+                                                  <div class="layui-input-inline" style="width: 100px;">
+                                                    <select name="province" lay-filter="province">
+                                                      <option value="" >请选择省</option>
+                                                    </select></div>
+                                                  <div class="layui-input-inline" style="width: 100px;">
+                                                    <select name="city" lay-filter="city">
+                                                      <option value="">请选择市</option>
+                                                    </select> </div>
+                                                  <div class="layui-input-inline" style="width: 100px;">
+                                                    <select name="area" lay-filter="area">
+                                                      <option value="">请选择县/区</option>
+                                                    </select></div>
+                                                  <input type="text" id="L_email" name="email" autocomplete="off" class="layui-input" style="width: 250px;" placeholder="请输入具体地点"></div></div></div>
+                                <div class="layui-form-item">
+                                    <label for="L_email" class="layui-form-label">
+                                    <span class="x-red">*</span>交付内容</label>
+                                    <div class="layui-input-inline" style="width: 260px;">
+                                            <input type="text" id="L_email" name="email" autocomplete="off" class="layui-input"></div></div>
+                                <div class="layui-form-item" >
+                                    <label for="L_email" class="layui-form-label">
+                                    <span class="x-red">*</span>交付方式</label>
+                                    <div class="layui-input-inline" style="width: 260px;">
+                                            <input type="text" id="L_email" name="email" autocomplete="off" class="layui-input"></div></div></form></div></div></div></div>
+        <div class="layui-fluid">
+            <div class="layui-card">
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <div class="table_2">
+                        <span style="font-size: 16px; color: #0000CD;">表格2</span>
+                        <span style="font-size: 16px; color: Chocolate;">（项目开发人员安排计划）</span>
+                        <table class="layui-table layui-form">
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">人 员 安 排 计 划</td>
+                            </tr>
+                            <tr>
+                                <td>工作内容</td>
+                                <td>项目实施计划日</td>
+                                <td>投入岗位</td>
+                                <td>单价(元)</td>
+                                <td>人数</td>
+                                <td>人员名称</td>
+                                <td>计划人日</td>
+                                <td>小计</td>
+                                <td>合计</td></tr>
+                            <tr>
+                                <td rowspan="6" style="font-size: 16px;">需求调研</td>
+                                <td rowspan="6" style="font-size: 16px;">40</td>
+                                <td rowspan="4"><button type="button" class="layui-btn layui-btn-lg btn-checked">产品经理</button></td>
+                                <td rowspan="4">200</td>
+                                <td rowspan="4">4</td>
+                                <td>小红</td>
+                                <td>10</td>
+                                <td rowspan="4">6888</td>
+                                <td rowspan="6">10000</td></tr>
+                            <tr>
+                                <td>小绿</td>
+                                <td>20</td></tr>
+                            <tr>
+                                <td>小蓝</td>
+                                <td>30</td></tr>
+                            <tr>
+                                <td>小紫</td>
+                                <td>40</td></tr>
+                            <tr>
+                                <td rowspan="2"><button type="button" class="layui-btn layui-btn-lg btn-checked">需求分析师</button></td>
+                                <td rowspan="2">500</td>
+                                <td rowspan="2">2</td>
+                                <td>黑色</td>
+                                <td>5</td>
+                                <td rowspan="2">3333</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+
+                            <tr>
+                                <td rowspan="16" style="font-size: 16px;">系统设计</td>
+                                <td rowspan="16" style="font-size: 16px;">40</td>
+                                <td rowspan="4"><button type="button" class="layui-btn layui-btn-lg btn-checked">产品经理</button></td>
+                                <td rowspan="4">111</td>
+                                <td rowspan="4">4</td>
+                                <td>小红</td>
+                                <td>10</td>
+                                <td rowspan="4">6888</td>
+                                <td rowspan="16">200000</td></tr>
+                            <tr>
+                                <td>小绿</td>
+                                <td>20</td></tr>
+                            <tr>
+                                <td>小蓝</td>
+                                <td>30</td></tr>
+                            <tr>
+                                <td>小紫</td>
+                                <td>40</td></tr>
+                            <tr>
+                                <td rowspan="3"><button type="button" class="layui-btn layui-btn-lg btn-checked">应用架构设计师</button></td>
+                                <td rowspan="3">222</td>
+                                <td rowspan="3">3</td>
+                                <td>黑色</td>
+                                <td>5</td>
+                                <td rowspan="3">1230</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td rowspan="2"><button type="button" class="layui-btn layui-btn-lg btn-checked">基础平台设计师</button></td>
+                                <td rowspan="2">333</td>
+                                <td rowspan="2">2</td>
+                                <td>你最牛</td>
+                                <td>10</td>
+                                <td rowspan="2">2233</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td rowspan="1"><button type="button" class="layui-btn layui-btn-lg btn-checked">客户端（app）设计师</button></td>
+                                <td rowspan="1">444</td>
+                                <td rowspan="1">2</td>
+                                <td>你好</td>
+                                <td>10</td>
+                                <td rowspan="1">4422</td></tr>
+                            <tr>
+                                <td rowspan="5"><button type="button" class="layui-btn layui-btn-lg btn-checked">前端设计设计师</button></td>
+                                <td rowspan="5">555</td>
+                                <td rowspan="5">5</td>
+                                <td>aa</td>
+                                <td>10</td>
+                                <td rowspan="5">8998</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td rowspan="1"><button type="button" class="layui-btn layui-btn-lg btn-checked">UI设计师</button></td>
+                                <td rowspan="1">666</td>
+                                <td rowspan="1">2</td>
+                                <td>你好</td>
+                                <td>10</td>
+                                <td rowspan="1">4422</td></tr>
+
+                            <tr>
+                                <td rowspan="13" style="font-size: 16px;">系统开发</td>
+                                <td rowspan="13" style="font-size: 16px;">40</td>
+                                <td rowspan="4"><button type="button" class="layui-btn layui-btn-lg btn-checked">java开发工程师</button></td>
+                                <td rowspan="4">111</td>
+                                <td rowspan="4">4</td>
+                                <td>小红</td>
+                                <td>10</td>
+                                <td rowspan="4">6888</td>
+                                <td rowspan="13">200000</td></tr>
+                            <tr>
+                                <td>小绿</td>
+                                <td>20</td></tr>
+                            <tr>
+                                <td>小蓝</td>
+                                <td>30</td></tr>
+                            <tr>
+                                <td>小紫</td>
+                                <td>40</td></tr>
+
+                            <tr>
+                                <td rowspan="3"><button type="button" class="layui-btn layui-btn-lg btn-checked">安卓开发工程师</button></td>
+                                <td rowspan="3">222</td>
+                                <td rowspan="3">3</td>
+                                <td>黑色</td>
+                                <td>5</td>
+                                <td rowspan="3">1230</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td rowspan="2"><button type="button" class="layui-btn layui-btn-lg btn-checked">苹果开发工程师</button></td>
+                                <td rowspan="2">333</td>
+                                <td rowspan="2">2</td>
+                                <td>你最牛</td>
+                                <td>10</td>
+                                <td rowspan="2">2233</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+
+                            <tr>
+                                <td rowspan="1"><button type="button" class="layui-btn layui-btn-lg btn-checked">C#开发工程师</button></td>
+                                <td rowspan="1">444</td>
+                                <td rowspan="1">1</td>
+                                <td>你好</td>
+                                <td>10</td>
+                                <td rowspan="1">4422</td></tr>
+
+                            <tr>
+                                <td rowspan="3"><button type="button" class="layui-btn layui-btn-lg btn-checked">前端开发工程师</button></td>
+                                <td rowspan="3">555</td>
+                                <td rowspan="3">3</td>
+                                <td>aa</td>
+                                <td>10</td>
+                                <td rowspan="3">8998</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+                            <tr>
+                                <td>黄色</td>
+                                <td>6</td></tr>
+
+                            <tr>
+                                <td rowspan="2" style="font-size: 16px;">系统测试</td>
+                                <td rowspan="2" style="font-size: 16px;">40</td>
+                                <td rowspan="2"><button type="button" class="layui-btn layui-btn-lg btn-checked">测试工程师</button></td>
+                                <td rowspan="2">200</td>
+                                <td rowspan="2">2</td>
+                                <td>小红</td>
+                                <td>10</td>
+                                <td rowspan="2">6888</td>
+                                <td rowspan="2">10000</td></tr>
+                            <tr>
+                                <td>小绿</td>
+                                <td>20</td></tr>
+
+                            <tr>
+                                <td rowspan="2" style="font-size: 16px;">业务支撑</td>
+                                <td rowspan="2" style="font-size: 16px;">40</td>
+                                <td rowspan="2"><button type="button" class="layui-btn layui-btn-lg btn-checked">业务经理</button></td>
+                                <td rowspan="2">200</td>
+                                <td rowspan="2">2</td>
+                                <td>小红</td>
+                                <td>10</td>
+                                <td rowspan="2">6888</td>
+                                <td rowspan="2">10000</td></tr>
+                            <tr>
+                                <td>小绿</td>
+                                <td>20</td></tr>
+
+                            <tr>
+                                <td rowspan="1" style="font-size: 16px;">系统实施</td>
+                                <td rowspan="1" style="font-size: 16px;">40</td>
+                                <td rowspan="1"><button type="button" class="layui-btn layui-btn-lg btn-checked">实施工程师</button></td>
+                                <td rowspan="1">1</td>
+                                <td>小红</td>
+                                <td>10</td>
+                                <td rowspan="1">6888</td>
+                                <td rowspan="1">10000</td></tr>
+
+                            <tr>
+                                <td rowspan="2" style="font-size: 16px;">项目管理</td>
+                                <td rowspan="2" style="font-size: 16px;">40</td>
+                                <td rowspan="2"><button type="button" class="layui-btn layui-btn-lg btn-checked">项目总监</button></td>
+                                <td rowspan="2">200</td>
+                                <td rowspan="2">2</td>
+                                <td>小红</td>
+                                <td>10</td>
+                                <td rowspan="2">6888</td>
+                                <td rowspan="2">10000</td></tr>
+                            <tr>
+                                <td>小绿</td>
+                                <td>20</td></tr>
+                            <tr>
+                                <td rowspan="1" style="font-size: 16px;">技术管理</td>
+                                <td rowspan="1" style="font-size: 16px;">40</td>
+                                <td rowspan="1"><button type="button" class="layui-btn layui-btn-lg btn-checked">技术总监</button></td>
+                                <td rowspan="1">200</td>
+                                <td rowspan="1">1</td>
+                                <td>小红</td>
+                                <td>10</td>
+                                <td rowspan="1">6888</td>
+                                <td rowspan="1">10000</td></tr>
+        </table></div></div></div></div>
+
+        <div class="layui-fluid">
+            <div class="layui-card">
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <div class="table_3">
+                        <span style="font-size: 16px; color: #0000CD;">表格3</span>
+                        <span style="font-size: 16px; color: Chocolate;">（搭建平台架构安排计划）</span>
+                        <table class="layui-table layui-form">
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">平 台 搭 建 人 员 安 排 计 划</td>
+                            </tr>
+                            <tr>
+                                <td>工作内容</td>
+                                <td>项目实施计划日</td>
+                                <td>投入岗位</td>
+                                <td>单价(元)</td>
+                                <td>人数</td>
+                                <td>小计</td>
+                                <td>合计</td></tr>
+                            <tr>
+                                <td rowspan="13" style="font-size: 16px;">基础平台搭建</td>
+                                <td rowspan="13" style="font-size: 16px;">40</td>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">产品经理</button></td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td>6888</td>
+                                <td rowspan="13">1500000</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">需求分析师</button></td>
+                                <td>500</td>
+                                <td>2</td>
+                                <td>3333</td></tr>
+
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">应用架构设计师</button></td>
+                                <td>222</td>
+                                <td>3</td>
+                                <td>1230</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">基础平台设计师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">客户端（app）设计师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端设计设计师</button></td>
+                                <td>555</td>
+                                <td>3</td>
+                                <td>8998</td></tr>
+
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">UI设计师</button></td>
+                                <td>666</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">java开发工程师</button></td>
+                                <td>111</td>
+                                <td>2</td>
+                                <td>6888</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">安卓开发工程师</button></td>
+                                <td>222</td>
+                                <td>2</td>
+                                <td>1230</td></tr>
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">苹果开发工程师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">C#开发工程师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端开发工程师</button></td>
+                                <td>555</td>
+                                <td>5</td>
+                                <td>8998</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">测试工程师</button></td>
+                                <td>200</td>
+                                <td>45</td>
+                                <td>6888</td></tr>
+
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">核 心 功 能 描 述</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">一级系统</td>
+                                <td>二级系统</td>
+                                <td>项目</td>
+                                <td colspan="5">核心功能描述</td></tr>
+                            <tr>
+                                <td rowspan="10" style="font-size: 16px;" colspan="2">壹篮菜团膳运营SaaS产品</td>
+                                <td rowspan="10" style="font-size: 16px;">基础平台</td>
+                                <td>Nginx网关</td>
+                                <td colspan="5">反向代理</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                        </table></div></div></div></div>
+
+        <div class="layui-fluid">
+            <div class="layui-card">
+                <div class="layui-card-body layui-table-body layui-table-main">
+                    <div class="table_3">
+                        <span style="font-size: 16px; color: #0000CD;">表格4</span>
+                        <span style="font-size: 16px; color: Chocolate;">（软件开发人员安排计划）</span>
+                        <table class="layui-table layui-form">
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">应 用 层 (小 程 序 端) 人 员 安 排 计 划</td>
+                            </tr>
+                            <tr>
+                                <td>工作内容</td>
+                                <td>项目实施计划日</td>
+                                <td>投入岗位</td>
+                                <td>单价(元)</td>
+                                <td>人数</td>
+                                <td>小计</td>
+                                <td>合计</td></tr>
+                            <tr>
+                                <td rowspan="13" style="font-size: 16px;">小程序端搭建</td>
+                                <td rowspan="13" style="font-size: 16px;">40</td>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">产品经理</button></td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td>6888</td>
+                                <td rowspan="13">1500000</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">需求分析师</button></td>
+                                <td>500</td>
+                                <td>2</td>
+                                <td>3333</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">应用架构设计师</button></td>
+                                <td>222</td>
+                                <td>3</td>
+                                <td>1230</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">基础平台设计师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">客户端（app）设计师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端设计设计师</button></td>
+                                <td>555</td>
+                                <td>3</td>
+                                <td>8998</td></tr>
+
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">UI设计师</button></td>
+                                <td>666</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">java开发工程师</button></td>
+                                <td>111</td>
+                                <td>2</td>
+                                <td>6888</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">安卓开发工程师</button></td>
+                                <td>222</td>
+                                <td>2</td>
+                                <td>1230</td></tr>
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">苹果开发工程师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">C#开发工程师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端开发工程师</button></td>
+                                <td>555</td>
+                                <td>5</td>
+                                <td>8998</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">测试工程师</button></td>
+                                <td>200</td>
+                                <td>45</td>
+                                <td>6888</td></tr>
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">核 心 功 能 描 述</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">一级系统</td>
+                                <td>二级系统</td>
+                                <td>项目</td>
+                                <td colspan="5">核心功能描述</td></tr>
+                            <tr>
+                                <td rowspan="10" style="font-size: 16px;" colspan="2">壹篮菜团膳运营SaaS产品</td>
+                                <td rowspan="10" style="font-size: 16px;">应用层——小程序端</td>
+                                <td>Nginx网关</td>
+                                <td colspan="5">反向代理</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr></table>
+
+                        <table class="layui-table layui-form">
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">应 用 层 (公 众 号 端) 人 员 安 排 计 划</td>
+                            </tr>
+                            <tr>
+                                <td>工作内容</td>
+                                <td>项目实施计划日</td>
+                                <td>投入岗位</td>
+                                <td>单价(元)</td>
+                                <td>人数</td>
+                                <td>小计</td>
+                                <td>合计</td></tr>
+                            <tr>
+                                <td rowspan="13" style="font-size: 16px;">公众号端搭建</td>
+                                <td rowspan="13" style="font-size: 16px;">40</td>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">产品经理</button></td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td>6888</td>
+                                <td rowspan="13">1500000</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">需求分析师</button></td>
+                                <td>500</td>
+                                <td>2</td>
+                                <td>3333</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">应用架构设计师</button></td>
+                                <td>222</td>
+                                <td>3</td>
+                                <td>1230</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">基础平台设计师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">客户端（app）设计师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端设计设计师</button></td>
+                                <td>555</td>
+                                <td>3</td>
+                                <td>8998</td></tr>
+
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">UI设计师</button></td>
+                                <td>666</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">java开发工程师</button></td>
+                                <td>111</td>
+                                <td>2</td>
+                                <td>6888</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">安卓开发工程师</button></td>
+                                <td>222</td>
+                                <td>2</td>
+                                <td>1230</td></tr>
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">苹果开发工程师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">C#开发工程师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端开发工程师</button></td>
+                                <td>555</td>
+                                <td>5</td>
+                                <td>8998</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">测试工程师</button></td>
+                                <td>200</td>
+                                <td>45</td>
+                                <td>6888</td></tr>
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">核 心 功 能 描 述</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">一级系统</td>
+                                <td>二级系统</td>
+                                <td>项目</td>
+                                <td colspan="5">核心功能描述</td></tr>
+                            <tr>
+                                <td rowspan="10" style="font-size: 16px;" colspan="2">壹篮菜团膳运营SaaS产品</td>
+                                <td rowspan="10" style="font-size: 16px;">应用层——公众号端</td>
+                                <td>Nginx网关</td>
+                                <td colspan="5">反向代理</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr></table>
+
+                        <table class="layui-table layui-form">
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">接 口 层 人 员 安 排 计 划</td>
+                            </tr>
+                            <tr>
+                                <td>工作内容</td>
+                                <td>项目实施计划日</td>
+                                <td>投入岗位</td>
+                                <td>单价(元)</td>
+                                <td>人数</td>
+                                <td>小计</td>
+                                <td>合计</td></tr>
+                            <tr>
+                                <td rowspan="13" style="font-size: 16px;">api接口搭建</td>
+                                <td rowspan="13" style="font-size: 16px;">40</td>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">产品经理</button></td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td>6888</td>
+                                <td rowspan="13">1500000</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">应用架构设计师</button></td>
+                                <td>500</td>
+                                <td>2</td>
+                                <td>3333</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">应用架构设计师</button></td>
+                                <td>222</td>
+                                <td>3</td>
+                                <td>1230</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">基础平台设计师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">客户端（app）设计师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端设计设计师</button></td>
+                                <td>555</td>
+                                <td>3</td>
+                                <td>8998</td></tr>
+
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">UI设计师</button></td>
+                                <td>666</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">java开发工程师</button></td>
+                                <td>111</td>
+                                <td>2</td>
+                                <td>6888</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">安卓开发工程师</button></td>
+                                <td>222</td>
+                                <td>2</td>
+                                <td>1230</td></tr>
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">苹果开发工程师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">C#开发工程师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端开发工程师</button></td>
+                                <td>555</td>
+                                <td>5</td>
+                                <td>8998</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">测试工程师</button></td>
+                                <td>200</td>
+                                <td>45</td>
+                                <td>6888</td></tr>
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">核 心 功 能 描 述</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">一级系统</td>
+                                <td>二级系统</td>
+                                <td>项目</td>
+                                <td colspan="5">核心功能描述</td></tr>
+                            <tr>
+                                <td rowspan="10" style="font-size: 16px;" colspan="2">壹篮菜团膳运营SaaS产品</td>
+                                <td rowspan="10" style="font-size: 16px;">api接口</td>
+                                <td>Nginx网关</td>
+                                <td colspan="5">反向代理</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr></table>
+
+                        <table class="layui-table layui-form">
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">服 务 层 人 员 安 排 计 划</td></tr>
+                            <tr>
+                                <td>工作内容</td>
+                                <td>项目实施计划日</td>
+                                <td>投入岗位</td>
+                                <td>单价(元)</td>
+                                <td>人数</td>
+                                <td>小计</td>
+                                <td>合计</td></tr>
+                            <tr>
+                                <td rowspan="13" style="font-size: 16px;">后台管理系统搭建</td>
+                                <td rowspan="13" style="font-size: 16px;">40</td>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">产品经理</button></td>
+                                <td>200</td>
+                                <td>3</td>
+                                <td>6888</td>
+                                <td rowspan="13">1500000</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">应用架构设计师</button></td>
+                                <td>500</td>
+                                <td>2</td>
+                                <td>3333</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">应用架构设计师</button></td>
+                                <td>222</td>
+                                <td>3</td>
+                                <td>1230</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">基础平台设计师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">客户端（app）设计师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端设计设计师</button></td>
+                                <td>555</td>
+                                <td>3</td>
+                                <td>8998</td></tr>
+
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">UI设计师</button></td>
+                                <td>666</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">java开发工程师</button></td>
+                                <td>111</td>
+                                <td>2</td>
+                                <td>6888</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">安卓开发工程师</button></td>
+                                <td>222</td>
+                                <td>2</td>
+                                <td>1230</td></tr>
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">苹果开发工程师</button></td>
+                                <td>333</td>
+                                <td>2</td>
+                                <td>2233</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">C#开发工程师</button></td>
+                                <td>444</td>
+                                <td>2</td>
+                                <td>4422</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">前端开发工程师</button></td>
+                                <td>555</td>
+                                <td>5</td>
+                                <td>8998</td></tr>
+
+                            <tr>
+                                <td><button type="button" class="layui-btn layui-btn-lg btn-checked">测试工程师</button></td>
+                                <td>200</td>
+                                <td>45</td>
+                                <td>6888</td></tr>
+                            <tr>
+                                <td colspan="10" style="font-size: 22px; color: #5FB878;">核 心 功 能 描 述</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">一级系统</td>
+                                <td>二级系统</td>
+                                <td>项目</td>
+                                <td colspan="5">核心功能描述</td></tr>
+                            <tr>
+                                <td rowspan="10" style="font-size: 16px;" colspan="2">壹篮菜团膳运营SaaS产品</td>
+                                <td rowspan="10" style="font-size: 16px;">后台管理系统</td>
+                                <td>Nginx网关</td>
+                                <td colspan="5">反向代理</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td >Nginx资源服务器</td>
+                                <td colspan="5">静态服务器</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr>
+                            <tr>
+                                <td>api网关Zuul</td>
+                                <td colspan="5">安全验证</td></tr></table></div>
+</div></div></div>
+    </body>
+
+    <script>layui.use(['form','code'], function(){
+        form = layui.form;
+        layui.code();
+        $('#site').xcity('广东','广州市','越秀区');
+    });</script>
+</html>

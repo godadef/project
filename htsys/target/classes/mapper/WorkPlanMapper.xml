@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ht.htsys.dao.WorkPlanMapper">
+    <select id="selectWorkPlanByLevel1Id" resultType="com.ht.htsys.pojo.WorkPlan" parameterType="string">
+    select * from tbs_work_plan where level1SystemId=#{level1SystemId}
+    </select>
+
+</mapper>

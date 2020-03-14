@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ht.htsys.dao.AdminMapper" >
+  <resultMap id="BaseResultMap" type="com.ht.htsys.pojo.Admin" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="login_id" property="loginId" jdbcType="VARCHAR" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="permission" property="permission" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, login_id, user_name, password, phone, create_time, update_date, permission
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="string" >
+    select 
+    <include refid="Base_Column_List" />
+    from tbs_admin
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tbs_admin
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ht.htsys.pojo.Admin" >
+    insert into tbs_admin (id, login_id, user_name, 
+      password, phone, create_time, 
+      update_date, permission)
+    values (#{id,jdbcType=INTEGER}, #{loginId,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateDate,jdbcType=TIMESTAMP}, #{permission,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ht.htsys.pojo.Admin" >
+    insert into tbs_admin
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="loginId != null" >
+        login_id,
+      </if>
+      <if test="userName != null" >
+        user_name,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateDate != null" >
+        update_date,
+      </if>
+      <if test="permission != null" >
+        permission,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="loginId != null" >
+        #{loginId,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="permission != null" >
+        #{permission,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ht.htsys.pojo.Admin" >
+    update tbs_admin
+    <set >
+      <if test="loginId != null" >
+        login_id = #{loginId,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null" >
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="permission != null" >
+        permission = #{permission,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ht.htsys.pojo.Admin" >
+    update tbs_admin
+    set login_id = #{loginId,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      permission = #{permission,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectAllAdmin" resultMap="BaseResultMap" >
+    select * from tbs_admin
+  </select>
+  <select id="selectByAdmin" resultMap="BaseResultMap" parameterType="com.ht.htsys.pojo.Admin">
+    select * from tbs_admin
+    <where>
+      <if test="loginId!=null and loginId!=''">
+        and login_id = #{loginId}
+      </if>
+      <if test="userName!=null and userName!=''">
+        and user_name like concat('%',#{userName},'%')
+      </if>
+    </where>
+  </select>
+  <select id="countAdminByLoginId" resultType="int" parameterType="string" >
+    SELECT count(1) from tbs_admin where login_id=#{loginId}
+  </select>
+  <select id="countAdmin" resultType="int" parameterType="com.ht.htsys.pojo.Admin" >
+    SELECT count(1) from tbs_admin where login_id=#{loginId} and password=#{password}
+  </select>
+
+  <select id="countAdminByMap" resultType="int" parameterType="map">
+    select count(1) from tbs_admin
+    <where>
+      <if test="loginId!=null and loginId!=''">
+        and login_id like concat('%',#{loginId},'%')
+      </if>
+      <if test="userName!=null and userName!=''">
+        and user_name like concat('%',#{userName},'%')
+      </if>
+      <if test="phone!=null and phone!=''">
+        and phone like concat(#{phone},'%')
+      </if>
+    </where>
+  </select>
+  <select id="getOnePageInfo" resultMap="BaseResultMap" parameterType="map">
+    select * from tbs_admin
+    <where>
+      <if test="loginId!=null and loginId!=''">
+        and login_id like concat('%',#{loginId},'%')
+      </if>
+      <if test="userName!=null and userName!=''">
+        and user_name like concat('%',#{userName},'%')
+      </if>
+      <if test="phone!=null and phone!=''">
+        and phone like concat(#{phone},'%')
+      </if>
+    </where>
+    limit #{startLimitPos},#{pageSize}
+  </select>
+  <select id="selectAdminByAdmin" resultMap="BaseResultMap" parameterType="com.ht.htsys.pojo.Admin">
+    select * from tbs_admin
+      where login_id = #{loginId} and password = #{password}
+  </select>
+
+</mapper>
