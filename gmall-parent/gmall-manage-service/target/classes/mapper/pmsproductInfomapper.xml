@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gec.gmall.manage.dao.PmsProductInfoMapper">
+    <select id="spuSaleAttrListCheckBySkuBySql" resultMap="resultMap">
+        SELECT sa.id as sa_id , sav.id as sav_id ,
+        sa.*,sav.*, if(ssav.sku_id,1,0) as isChecked
+        FROM
+        pms_product_sale_attr sa
+        INNER JOIN pms_product_sale_attr_value sav
+        ON sa.product_id = sav.product_id
+        AND sa.sale_attr_id = sav.sale_attr_id
+        AND sa.product_id = #{productId}
+        LEFT JOIN pms_sku_sale_attr_value ssav ON
+        sav.id = ssav.sale_attr_value_id
+        AND ssav.sku_id = #{skuId}
+    </select>
+    <resultMap id="resultMap" type="com.gec.gmall.manage.bean.PmsProductSaleAttr">
+        <id property="id" column="sa_id"/>
+        <result property="productId" column="product_id" />
+        <result property="saleAttrId" column="sale_attr_id" />
+        <result property="saleAttrName" column="sale_attr_name" />
+        <!--实现一对多的数据值注入-->
+        <collection property="spuSaleAttrValueList" ofType="com.gec.gmall.manage.bean.PmsProductSaleAttrValue">
+            <id property="id" column="sav_id"/>
+            <result property="productId" column="product_id" />
+            <result property="saleAttrId" column="sale_attr_id" />
+            <result property="saleAttrValueName" column="sale_attr_value_name" />
+            <result property="isChecked" column="isChecked" />
+        </collection>
+    </resultMap>
+
+    <select id="selectSkuSaleAttrValueListBySpuId" resultMap="resultPmsSkuInfo">
+    select si.*,ssav.*,si.id as si_id,ssav.id
+    as ssav_id from
+    pms_sku_info si,
+    pms_sku_sale_attr_value ssav
+    WHERE
+    si.id=ssav.sku_id
+    and
+    si.product_id=#{productId}
+    </select>
+
+    <resultMap id="resultPmsSkuInfo" type="com.gec.gmall.manage.bean.PmsSkuInfo" autoMapping="true">
+        <result column="si_id" property="id"/>
+        <collection property="skuSaleAttrValueList" ofType="com.gec.gmall.manage.bean.PmsSkuSaleAttrValue" autoMapping="true">
+            <result property="id" column="ssav_id"/>
+        </collection>
+    </resultMap>
+</mapper>
